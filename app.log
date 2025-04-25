@@ -1459,3 +1459,12 @@
 2025-04-24 22:31:19,251 - __main__ - INFO - Confirmation de téléchargement reçue pour: 20250424_223103_AgCQSf4bVrY
 2025-04-24 22:31:19,252 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:19] "POST /confirm-download/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
 2025-04-24 22:31:24,254 - __main__ - INFO - Fichier supprimé après téléchargement: downloads\video_20250424_223103_AgCQSf4bVrY.mp4
+2025-04-25 15:40:14,311 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-25 15:40:14,311 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-25 15:40:14,313 - werkzeug - INFO -  * Restarting with stat
+2025-04-25 15:40:15,513 - werkzeug - WARNING -  * Debugger is active!
+2025-04-25 15:40:15,523 - werkzeug - INFO -  * Debugger PIN: 600-655-725
+2025-04-25 15:40:16,946 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 15:40:16] "GET / HTTP/1.1" 200 -
+2025-04-25 15:40:16,952 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 15:40:16] "GET / HTTP/1.1" 200 -
+2025-04-25 15:40:17,137 - werkzeug - INFO - 127.0.0.1 - - [25/Apr/2025 15:40:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

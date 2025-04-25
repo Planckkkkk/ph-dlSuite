@@ -1,5 +1,2 @@
 flask==3.0.2
-pytube==15.0.0
-flask-wtf==1.2.1
-python-dotenv==1.0.1
-werkzeug==3.0.1 
+yt-dlp==2023.11.16
