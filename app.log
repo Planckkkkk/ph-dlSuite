@@ -1,0 +1,1461 @@
+2025-04-24 22:00:15,818 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 22:00:15,818 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 22:00:15,820 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:00:16,918 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:00:16,928 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:00:23,011 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:23] "GET / HTTP/1.1" 200 -
+2025-04-24 22:00:27,606 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:00:27,607 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:00:27,607 - __main__ - INFO - ID vidéo extrait: 1C3KnSjAizo
+2025-04-24 22:00:27,607 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:00:27,608 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:00:27,770 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:00:31,872 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:00:31,872 - __main__ - INFO - Nombre de formats trouvés: 20
+2025-04-24 22:00:32,087 - __main__ - INFO - Meilleur format audio trouvé: 129.48kbps - Taille réelle: 11563459 bytes
+2025-04-24 22:00:32,131 - __main__ - INFO - Meilleur format audio trouvé: 139.216kbps - Taille réelle: 12432396 bytes
+2025-04-24 22:00:32,132 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:00:32,514 - __main__ - INFO - Format audio trouvé: 129.48kbps - Taille: 11563459 bytes
+2025-04-24 22:00:32,581 - __main__ - INFO - Format audio trouvé: 139.216kbps - Taille: 12432396 bytes
+2025-04-24 22:00:32,802 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 9948618 bytes - Total avec audio: 22381014 bytes - Adaptatif: True
+2025-04-24 22:00:33,016 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 48786484 bytes - Total avec audio: 61218880 bytes - Adaptatif: True
+2025-04-24 22:00:33,063 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 60291663 bytes - Total avec audio: 60291663 bytes - Adaptatif: False
+2025-04-24 22:00:33,297 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 25990564 bytes - Total avec audio: 38422960 bytes - Adaptatif: True
+2025-04-24 22:00:33,345 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 178937974 bytes - Total avec audio: 191370370 bytes - Adaptatif: True
+2025-04-24 22:00:33,561 - __main__ - INFO - Format vidéo trouvé: 720p 60fps - Taille vidéo: 235948672 bytes - Total avec audio: 248381068 bytes - Adaptatif: True
+2025-04-24 22:00:33,776 - __main__ - INFO - Format vidéo trouvé: 1080p 60fps - Taille vidéo: 439600843 bytes - Total avec audio: 452033239 bytes - Adaptatif: True
+2025-04-24 22:00:33,778 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:00:33,778 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:33] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:00:34,914 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:34] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:00:34,915 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=144]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_220034.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000015317B32520>], 'merge_output_format': 'mp4'}
+2025-04-24 22:00:35,060 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:35] "GET /download-status/20250424_220034 HTTP/1.1" 200 -
+2025-04-24 22:00:36,079 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:36] "GET /download-status/20250424_220034 HTTP/1.1" 200 -
+2025-04-24 22:00:37,450 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:37] "GET /download-status/20250424_220034 HTTP/1.1" 200 -
+2025-04-24 22:00:38,528 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:38] "GET /download-status/20250424_220034 HTTP/1.1" 200 -
+2025-04-24 22:00:38,588 - __main__ - INFO - Progression: 0.0% (1024/9948618 bytes)
+2025-04-24 22:00:38,589 - __main__ - INFO - Progression: 0.0% (3072/9948618 bytes)
+2025-04-24 22:00:38,590 - __main__ - INFO - Progression: 0.1% (7168/9948618 bytes)
+2025-04-24 22:00:38,591 - __main__ - INFO - Progression: 0.2% (15360/9948618 bytes)
+2025-04-24 22:00:38,600 - __main__ - INFO - Progression: 0.3% (31744/9948618 bytes)
+2025-04-24 22:00:38,608 - __main__ - INFO - Progression: 0.6% (64512/9948618 bytes)
+2025-04-24 22:00:38,622 - __main__ - INFO - Progression: 1.3% (130048/9948618 bytes)
+2025-04-24 22:00:38,636 - __main__ - INFO - Progression: 2.6% (261120/9948618 bytes)
+2025-04-24 22:00:38,662 - __main__ - INFO - Progression: 5.3% (523264/9948618 bytes)
+2025-04-24 22:00:38,706 - __main__ - INFO - Progression: 10.5% (1047552/9948618 bytes)
+2025-04-24 22:00:38,795 - __main__ - INFO - Progression: 21.1% (2096128/9948618 bytes)
+2025-04-24 22:00:38,973 - __main__ - INFO - Progression: 42.1% (4193280/9948618 bytes)
+2025-04-24 22:00:39,328 - __main__ - INFO - Progression: 84.3% (8387584/9948618 bytes)
+2025-04-24 22:00:39,459 - __main__ - INFO - Progression: 100.0% (9948618/9948618 bytes)
+2025-04-24 22:00:39,461 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220034.f160.mp4
+2025-04-24 22:00:39,549 - __main__ - INFO - Renvoi du fichier vidéo partiel: downloads\video_20250424_220034.f160.mp4
+2025-04-24 22:00:39,553 - __main__ - INFO - Fichier copié: downloads\video_20250424_220034.f160.mp4 -> downloads\video_20250424_220034.mp4
+2025-04-24 22:00:39,554 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:00:39] "GET /download-status/20250424_220034 HTTP/1.1" 200 -
+2025-04-24 22:00:39,603 - __main__ - INFO - Progression: 0.0% (1024/12432396 bytes)
+2025-04-24 22:00:39,604 - __main__ - INFO - Progression: 0.0% (3072/12432396 bytes)
+2025-04-24 22:00:39,606 - __main__ - INFO - Progression: 0.1% (7168/12432396 bytes)
+2025-04-24 22:00:39,608 - __main__ - INFO - Progression: 0.1% (15360/12432396 bytes)
+2025-04-24 22:00:39,609 - __main__ - INFO - Progression: 0.3% (31744/12432396 bytes)
+2025-04-24 22:00:39,611 - __main__ - INFO - Progression: 0.5% (64512/12432396 bytes)
+2025-04-24 22:00:39,613 - __main__ - INFO - Progression: 1.0% (130048/12432396 bytes)
+2025-04-24 22:00:39,624 - __main__ - INFO - Progression: 2.1% (261120/12432396 bytes)
+2025-04-24 22:00:39,646 - __main__ - INFO - Progression: 4.2% (523264/12432396 bytes)
+2025-04-24 22:00:39,691 - __main__ - INFO - Progression: 8.4% (1047552/12432396 bytes)
+2025-04-24 22:00:39,779 - __main__ - INFO - Progression: 16.9% (2096128/12432396 bytes)
+2025-04-24 22:00:39,957 - __main__ - INFO - Progression: 33.7% (4193280/12432396 bytes)
+2025-04-24 22:00:40,313 - __main__ - INFO - Progression: 67.5% (8387584/12432396 bytes)
+2025-04-24 22:00:40,480 - __main__ - INFO - Progression: 83.5% (10380010/12432396 bytes)
+2025-04-24 22:00:40,650 - __main__ - INFO - Progression: 83.5% (10381034/12432396 bytes)
+2025-04-24 22:00:40,651 - __main__ - INFO - Progression: 83.5% (10383082/12432396 bytes)
+2025-04-24 22:00:40,652 - __main__ - INFO - Progression: 83.5% (10387178/12432396 bytes)
+2025-04-24 22:00:40,654 - __main__ - INFO - Progression: 83.6% (10395370/12432396 bytes)
+2025-04-24 22:00:40,655 - __main__ - INFO - Progression: 83.7% (10411754/12432396 bytes)
+2025-04-24 22:00:40,657 - __main__ - INFO - Progression: 84.0% (10444522/12432396 bytes)
+2025-04-24 22:00:40,660 - __main__ - INFO - Progression: 84.5% (10510058/12432396 bytes)
+2025-04-24 22:00:40,671 - __main__ - INFO - Progression: 85.6% (10641130/12432396 bytes)
+2025-04-24 22:00:40,694 - __main__ - INFO - Progression: 87.7% (10903274/12432396 bytes)
+2025-04-24 22:00:40,738 - __main__ - INFO - Progression: 91.9% (11427562/12432396 bytes)
+2025-04-24 22:00:40,822 - __main__ - INFO - Progression: 100.0% (12432396/12432396 bytes)
+2025-04-24 22:00:40,824 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220034.f251.webm
+2025-04-24 22:00:41,042 - __main__ - ERROR - Erreur dans le thread de téléchargement: [WinError 183] Impossible de créer un fichier déjà existant: 'downloads\\video_20250424_220034.temp.mp4' -> 'downloads\\video_20250424_220034.mp4'
+2025-04-24 22:00:41,044 - __main__ - INFO - Fichier existant supprimé: downloads\video_20250424_220034.mp4
+2025-04-24 22:00:41,044 - __main__ - INFO - Fichier renommé manuellement: downloads\video_20250424_220034.temp.mp4 -> downloads\video_20250424_220034.mp4
+2025-04-24 22:01:42,449 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:01:42,535 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:01:43,702 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:01:43,712 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:02:10,652 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:02:10,712 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:02:11,874 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:02:11,885 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:02:39,454 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 22:02:39,455 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 22:02:39,456 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:02:40,513 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:02:40,523 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:02:45,456 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:02:45] "GET / HTTP/1.1" 200 -
+2025-04-24 22:02:50,814 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:02:50,815 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:02:50,815 - __main__ - INFO - ID vidéo extrait: 1C3KnSjAizo
+2025-04-24 22:02:50,816 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:02:50,816 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:02:50,987 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:02:55,009 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:02:55,010 - __main__ - INFO - Nombre de formats trouvés: 20
+2025-04-24 22:02:55,235 - __main__ - INFO - Meilleur format audio trouvé: 129.48kbps - Taille réelle: 11563459 bytes
+2025-04-24 22:02:55,281 - __main__ - INFO - Meilleur format audio trouvé: 139.216kbps - Taille réelle: 12432396 bytes
+2025-04-24 22:02:55,281 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:02:55,659 - __main__ - INFO - Format audio trouvé: 129.48kbps - Taille: 11563459 bytes
+2025-04-24 22:02:55,705 - __main__ - INFO - Format audio trouvé: 139.216kbps - Taille: 12432396 bytes
+2025-04-24 22:02:55,925 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 9948618 bytes - Total avec audio: 22381014 bytes - Adaptatif: True
+2025-04-24 22:02:56,164 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 48786484 bytes - Total avec audio: 61218880 bytes - Adaptatif: True
+2025-04-24 22:02:56,347 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 60291663 bytes - Total avec audio: 60291663 bytes - Adaptatif: False
+2025-04-24 22:02:56,538 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 25990564 bytes - Total avec audio: 38422960 bytes - Adaptatif: True
+2025-04-24 22:02:56,607 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 178937974 bytes - Total avec audio: 191370370 bytes - Adaptatif: True
+2025-04-24 22:02:56,922 - __main__ - INFO - Format vidéo trouvé: 720p 60fps - Taille vidéo: 235948672 bytes - Total avec audio: 248381068 bytes - Adaptatif: True
+2025-04-24 22:02:57,143 - __main__ - INFO - Format vidéo trouvé: 1080p 60fps - Taille vidéo: 439600843 bytes - Total avec audio: 452033239 bytes - Adaptatif: True
+2025-04-24 22:02:57,145 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:02:57,146 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:02:57] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:03:10,096 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:10] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:03:10,096 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=144]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_220310.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x000001A186F0F4C0>], 'merge_output_format': 'mp4'}
+2025-04-24 22:03:10,159 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:10] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:11,178 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:11] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:12,439 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:12] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:13,742 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:13] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:14,001 - __main__ - INFO - Progression: 0.0% (1024/9948618 bytes)
+2025-04-24 22:03:14,003 - __main__ - INFO - Progression: 0.0% (3072/9948618 bytes)
+2025-04-24 22:03:14,004 - __main__ - INFO - Progression: 0.1% (7168/9948618 bytes)
+2025-04-24 22:03:14,005 - __main__ - INFO - Progression: 0.2% (15360/9948618 bytes)
+2025-04-24 22:03:14,013 - __main__ - INFO - Progression: 0.3% (31744/9948618 bytes)
+2025-04-24 22:03:14,021 - __main__ - INFO - Progression: 0.6% (64512/9948618 bytes)
+2025-04-24 22:03:14,035 - __main__ - INFO - Progression: 1.3% (130048/9948618 bytes)
+2025-04-24 22:03:14,048 - __main__ - INFO - Progression: 2.6% (261120/9948618 bytes)
+2025-04-24 22:03:14,075 - __main__ - INFO - Progression: 5.3% (523264/9948618 bytes)
+2025-04-24 22:03:14,120 - __main__ - INFO - Progression: 10.5% (1047552/9948618 bytes)
+2025-04-24 22:03:14,209 - __main__ - INFO - Progression: 21.1% (2096128/9948618 bytes)
+2025-04-24 22:03:14,387 - __main__ - INFO - Progression: 42.1% (4193280/9948618 bytes)
+2025-04-24 22:03:14,742 - __main__ - INFO - Progression: 84.3% (8387584/9948618 bytes)
+2025-04-24 22:03:14,759 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:14] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:14,873 - __main__ - INFO - Progression: 100.0% (9948618/9948618 bytes)
+2025-04-24 22:03:14,875 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220310.f160.mp4
+2025-04-24 22:03:15,035 - __main__ - INFO - Progression: 0.0% (1024/12432396 bytes)
+2025-04-24 22:03:15,036 - __main__ - INFO - Progression: 0.0% (3072/12432396 bytes)
+2025-04-24 22:03:15,037 - __main__ - INFO - Progression: 0.1% (7168/12432396 bytes)
+2025-04-24 22:03:15,039 - __main__ - INFO - Progression: 0.1% (15360/12432396 bytes)
+2025-04-24 22:03:15,040 - __main__ - INFO - Progression: 0.3% (31744/12432396 bytes)
+2025-04-24 22:03:15,042 - __main__ - INFO - Progression: 0.5% (64512/12432396 bytes)
+2025-04-24 22:03:15,044 - __main__ - INFO - Progression: 1.0% (130048/12432396 bytes)
+2025-04-24 22:03:15,056 - __main__ - INFO - Progression: 2.1% (261120/12432396 bytes)
+2025-04-24 22:03:15,077 - __main__ - INFO - Progression: 4.2% (523264/12432396 bytes)
+2025-04-24 22:03:15,123 - __main__ - INFO - Progression: 8.4% (1047552/12432396 bytes)
+2025-04-24 22:03:15,211 - __main__ - INFO - Progression: 16.9% (2096128/12432396 bytes)
+2025-04-24 22:03:15,388 - __main__ - INFO - Progression: 33.7% (4193280/12432396 bytes)
+2025-04-24 22:03:15,744 - __main__ - INFO - Progression: 67.5% (8387584/12432396 bytes)
+2025-04-24 22:03:15,914 - __main__ - INFO - Progression: 83.7% (10408988/12432396 bytes)
+2025-04-24 22:03:16,076 - __main__ - INFO - Progression: 83.7% (10410012/12432396 bytes)
+2025-04-24 22:03:16,077 - __main__ - INFO - Progression: 83.7% (10412060/12432396 bytes)
+2025-04-24 22:03:16,078 - __main__ - INFO - Progression: 83.8% (10416156/12432396 bytes)
+2025-04-24 22:03:16,079 - __main__ - INFO - Progression: 83.8% (10424348/12432396 bytes)
+2025-04-24 22:03:16,080 - __main__ - INFO - Progression: 84.0% (10440732/12432396 bytes)
+2025-04-24 22:03:16,082 - __main__ - INFO - Progression: 84.2% (10473500/12432396 bytes)
+2025-04-24 22:03:16,116 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:16] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:03:16,167 - __main__ - INFO - Progression: 84.8% (10539036/12432396 bytes)
+2025-04-24 22:03:16,178 - __main__ - INFO - Progression: 85.8% (10670108/12432396 bytes)
+2025-04-24 22:03:16,201 - __main__ - INFO - Progression: 87.9% (10932252/12432396 bytes)
+2025-04-24 22:03:16,245 - __main__ - INFO - Progression: 92.2% (11456540/12432396 bytes)
+2025-04-24 22:03:16,327 - __main__ - INFO - Progression: 100.0% (12432396/12432396 bytes)
+2025-04-24 22:03:16,329 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220310.f251.webm
+2025-04-24 22:03:16,577 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:03:17,131 - __main__ - INFO - Fichier final trouvé: downloads\video_20250424_220310.mp4
+2025-04-24 22:03:17,131 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:03:17] "GET /download-status/20250424_220310 HTTP/1.1" 200 -
+2025-04-24 22:05:03,360 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:05:03,479 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:05:04,630 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:05:04,640 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:05:10,966 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:05:11,027 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:05:12,393 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:05:12,406 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:05:13,685 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:13] "GET / HTTP/1.1" 200 -
+2025-04-24 22:05:15,909 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:05:15,910 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:05:15,910 - __main__ - INFO - ID vidéo extrait: 1C3KnSjAizo
+2025-04-24 22:05:15,910 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:05:15,911 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:05:16,079 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:05:19,962 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:05:19,963 - __main__ - INFO - Nombre de formats trouvés: 20
+2025-04-24 22:05:20,182 - __main__ - INFO - Meilleur format audio trouvé: 129.48kbps - Taille réelle: 11563459 bytes
+2025-04-24 22:05:20,230 - __main__ - INFO - Meilleur format audio trouvé: 139.216kbps - Taille réelle: 12432396 bytes
+2025-04-24 22:05:20,231 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:05:20,631 - __main__ - INFO - Format audio trouvé: 129.48kbps - Taille: 11563459 bytes
+2025-04-24 22:05:20,677 - __main__ - INFO - Format audio trouvé: 139.216kbps - Taille: 12432396 bytes
+2025-04-24 22:05:20,894 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 9948618 bytes - Total avec audio: 22381014 bytes - Adaptatif: True
+2025-04-24 22:05:21,118 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 48786484 bytes - Total avec audio: 61218880 bytes - Adaptatif: True
+2025-04-24 22:05:21,246 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 60291663 bytes - Total avec audio: 60291663 bytes - Adaptatif: False
+2025-04-24 22:05:21,470 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 25990564 bytes - Total avec audio: 38422960 bytes - Adaptatif: True
+2025-04-24 22:05:21,515 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 178937974 bytes - Total avec audio: 191370370 bytes - Adaptatif: True
+2025-04-24 22:05:21,733 - __main__ - INFO - Format vidéo trouvé: 720p 60fps - Taille vidéo: 235948672 bytes - Total avec audio: 248381068 bytes - Adaptatif: True
+2025-04-24 22:05:21,959 - __main__ - INFO - Format vidéo trouvé: 1080p 60fps - Taille vidéo: 439600843 bytes - Total avec audio: 452033239 bytes - Adaptatif: True
+2025-04-24 22:05:21,962 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:05:21,962 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:21] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:05:24,528 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:24] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:05:24,528 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=144]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_220524.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000025D31272520>], 'merge_output_format': 'mp4'}
+2025-04-24 22:05:24,595 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:24] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:25,614 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:25] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:26,831 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:26] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:28,016 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:28] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:28,296 - __main__ - INFO - Progression: 0.0% (1024/9948618 bytes)
+2025-04-24 22:05:28,297 - __main__ - INFO - Progression: 0.0% (3072/9948618 bytes)
+2025-04-24 22:05:28,299 - __main__ - INFO - Progression: 0.1% (7168/9948618 bytes)
+2025-04-24 22:05:28,300 - __main__ - INFO - Progression: 0.2% (15360/9948618 bytes)
+2025-04-24 22:05:28,307 - __main__ - INFO - Progression: 0.3% (31744/9948618 bytes)
+2025-04-24 22:05:28,315 - __main__ - INFO - Progression: 0.6% (64512/9948618 bytes)
+2025-04-24 22:05:28,326 - __main__ - INFO - Progression: 1.3% (130048/9948618 bytes)
+2025-04-24 22:05:28,340 - __main__ - INFO - Progression: 2.6% (261120/9948618 bytes)
+2025-04-24 22:05:28,366 - __main__ - INFO - Progression: 5.3% (523264/9948618 bytes)
+2025-04-24 22:05:28,411 - __main__ - INFO - Progression: 10.5% (1047552/9948618 bytes)
+2025-04-24 22:05:28,500 - __main__ - INFO - Progression: 21.1% (2096128/9948618 bytes)
+2025-04-24 22:05:28,678 - __main__ - INFO - Progression: 42.1% (4193280/9948618 bytes)
+2025-04-24 22:05:29,034 - __main__ - INFO - Progression: 84.3% (8387584/9948618 bytes)
+2025-04-24 22:05:29,040 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:29] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:29,165 - __main__ - INFO - Progression: 100.0% (9948618/9948618 bytes)
+2025-04-24 22:05:29,167 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220524.f160.mp4
+2025-04-24 22:05:29,238 - __main__ - INFO - Progression: 0.0% (1024/12432396 bytes)
+2025-04-24 22:05:29,239 - __main__ - INFO - Progression: 0.0% (3072/12432396 bytes)
+2025-04-24 22:05:29,241 - __main__ - INFO - Progression: 0.1% (7168/12432396 bytes)
+2025-04-24 22:05:29,242 - __main__ - INFO - Progression: 0.1% (15360/12432396 bytes)
+2025-04-24 22:05:29,244 - __main__ - INFO - Progression: 0.3% (31744/12432396 bytes)
+2025-04-24 22:05:29,246 - __main__ - INFO - Progression: 0.5% (64512/12432396 bytes)
+2025-04-24 22:05:29,248 - __main__ - INFO - Progression: 1.0% (130048/12432396 bytes)
+2025-04-24 22:05:29,258 - __main__ - INFO - Progression: 2.1% (261120/12432396 bytes)
+2025-04-24 22:05:29,281 - __main__ - INFO - Progression: 4.2% (523264/12432396 bytes)
+2025-04-24 22:05:29,325 - __main__ - INFO - Progression: 8.4% (1047552/12432396 bytes)
+2025-04-24 22:05:29,414 - __main__ - INFO - Progression: 16.9% (2096128/12432396 bytes)
+2025-04-24 22:05:29,591 - __main__ - INFO - Progression: 33.7% (4193280/12432396 bytes)
+2025-04-24 22:05:29,947 - __main__ - INFO - Progression: 67.5% (8387584/12432396 bytes)
+2025-04-24 22:05:30,049 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:30] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:05:30,120 - __main__ - INFO - Progression: 84.0% (10442387/12432396 bytes)
+2025-04-24 22:05:30,187 - __main__ - INFO - Progression: 84.0% (10443411/12432396 bytes)
+2025-04-24 22:05:30,188 - __main__ - INFO - Progression: 84.0% (10445459/12432396 bytes)
+2025-04-24 22:05:30,190 - __main__ - INFO - Progression: 84.1% (10449555/12432396 bytes)
+2025-04-24 22:05:30,192 - __main__ - INFO - Progression: 84.1% (10457747/12432396 bytes)
+2025-04-24 22:05:30,193 - __main__ - INFO - Progression: 84.2% (10474131/12432396 bytes)
+2025-04-24 22:05:30,195 - __main__ - INFO - Progression: 84.5% (10506899/12432396 bytes)
+2025-04-24 22:05:30,197 - __main__ - INFO - Progression: 85.0% (10572435/12432396 bytes)
+2025-04-24 22:05:30,208 - __main__ - INFO - Progression: 86.1% (10703507/12432396 bytes)
+2025-04-24 22:05:30,231 - __main__ - INFO - Progression: 88.2% (10965651/12432396 bytes)
+2025-04-24 22:05:30,275 - __main__ - INFO - Progression: 92.4% (11489939/12432396 bytes)
+2025-04-24 22:05:30,354 - __main__ - INFO - Progression: 100.0% (12432396/12432396 bytes)
+2025-04-24 22:05:30,356 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220524.f251.webm
+2025-04-24 22:05:30,636 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:05:31,066 - __main__ - INFO - Fichier final trouvé: downloads\video_20250424_220524.mp4
+2025-04-24 22:05:31,066 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:05:31] "GET /download-status/20250424_220524 HTTP/1.1" 200 -
+2025-04-24 22:06:39,599 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:06:39,687 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:06:40,898 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:06:40,909 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:07:07,901 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:07:07,965 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:07:09,187 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:07:09,197 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:07:45,370 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:07:45,436 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:07:46,624 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:07:46,634 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:07:49,289 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:07:49] "GET / HTTP/1.1" 200 -
+2025-04-24 22:07:51,541 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:07:51,542 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:07:51,542 - __main__ - INFO - ID vidéo extrait: 1C3KnSjAizo
+2025-04-24 22:07:51,542 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:07:51,543 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:07:51,714 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:07:55,752 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:07:55,752 - __main__ - INFO - Nombre de formats trouvés: 20
+2025-04-24 22:07:55,978 - __main__ - INFO - Meilleur format audio trouvé: 129.48kbps - Taille réelle: 11563459 bytes
+2025-04-24 22:07:56,109 - __main__ - INFO - Meilleur format audio trouvé: 139.216kbps - Taille réelle: 12432396 bytes
+2025-04-24 22:07:56,109 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:07:56,470 - __main__ - INFO - Format audio trouvé: 129.48kbps - Taille: 11563459 bytes
+2025-04-24 22:07:56,564 - __main__ - INFO - Format audio trouvé: 139.216kbps - Taille: 12432396 bytes
+2025-04-24 22:07:56,775 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 9948618 bytes - Total avec audio: 22381014 bytes - Adaptatif: True
+2025-04-24 22:07:57,015 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 48786484 bytes - Total avec audio: 61218880 bytes - Adaptatif: True
+2025-04-24 22:07:57,062 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 60291663 bytes - Total avec audio: 60291663 bytes - Adaptatif: False
+2025-04-24 22:07:57,285 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 25990564 bytes - Total avec audio: 38422960 bytes - Adaptatif: True
+2025-04-24 22:07:57,332 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 178937974 bytes - Total avec audio: 191370370 bytes - Adaptatif: True
+2025-04-24 22:07:57,566 - __main__ - INFO - Format vidéo trouvé: 720p 60fps - Taille vidéo: 235948672 bytes - Total avec audio: 248381068 bytes - Adaptatif: True
+2025-04-24 22:07:57,829 - __main__ - INFO - Format vidéo trouvé: 1080p 60fps - Taille vidéo: 439600843 bytes - Total avec audio: 452033239 bytes - Adaptatif: True
+2025-04-24 22:07:57,831 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:07:57,832 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:07:57] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:07:59,055 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:07:59] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:07:59,055 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=144]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_220759.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x00000273502D5120>], 'merge_output_format': 'mp4'}
+2025-04-24 22:07:59,120 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:07:59] "GET /download-status/20250424_220759 HTTP/1.1" 200 -
+2025-04-24 22:08:00,134 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:00] "GET /download-status/20250424_220759 HTTP/1.1" 200 -
+2025-04-24 22:08:02,144 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:02] "GET /download-status/20250424_220759 HTTP/1.1" 200 -
+2025-04-24 22:08:02,755 - __main__ - INFO - Progression: 0.0% (1024/9948618 bytes)
+2025-04-24 22:08:02,756 - __main__ - INFO - Progression: 0.0% (3072/9948618 bytes)
+2025-04-24 22:08:02,757 - __main__ - INFO - Progression: 0.1% (7168/9948618 bytes)
+2025-04-24 22:08:02,759 - __main__ - INFO - Progression: 0.2% (15360/9948618 bytes)
+2025-04-24 22:08:02,767 - __main__ - INFO - Progression: 0.3% (31744/9948618 bytes)
+2025-04-24 22:08:02,775 - __main__ - INFO - Progression: 0.6% (64512/9948618 bytes)
+2025-04-24 22:08:02,789 - __main__ - INFO - Progression: 1.3% (130048/9948618 bytes)
+2025-04-24 22:08:02,802 - __main__ - INFO - Progression: 2.6% (261120/9948618 bytes)
+2025-04-24 22:08:02,829 - __main__ - INFO - Progression: 5.3% (523264/9948618 bytes)
+2025-04-24 22:08:02,873 - __main__ - INFO - Progression: 10.5% (1047552/9948618 bytes)
+2025-04-24 22:08:02,962 - __main__ - INFO - Progression: 21.1% (2096128/9948618 bytes)
+2025-04-24 22:08:03,140 - __main__ - INFO - Progression: 42.1% (4193280/9948618 bytes)
+2025-04-24 22:08:03,192 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:03] "GET /download-status/20250424_220759 HTTP/1.1" 200 -
+2025-04-24 22:08:03,496 - __main__ - INFO - Progression: 84.3% (8387584/9948618 bytes)
+2025-04-24 22:08:03,627 - __main__ - INFO - Progression: 100.0% (9948618/9948618 bytes)
+2025-04-24 22:08:03,628 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220759.f160.mp4
+2025-04-24 22:08:04,332 - __main__ - INFO - Renvoi du fichier vidéo partiel: downloads\video_20250424_220759.f160.mp4
+2025-04-24 22:08:04,336 - __main__ - INFO - Fichier copié: downloads\video_20250424_220759.f160.mp4 -> downloads\video_20250424_220759.mp4
+2025-04-24 22:08:04,337 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:04] "GET /download-status/20250424_220759 HTTP/1.1" 200 -
+2025-04-24 22:08:04,345 - __main__ - INFO - Progression: 0.0% (1024/12432396 bytes)
+2025-04-24 22:08:04,347 - __main__ - INFO - Progression: 0.0% (3072/12432396 bytes)
+2025-04-24 22:08:04,349 - __main__ - INFO - Progression: 0.1% (7168/12432396 bytes)
+2025-04-24 22:08:04,350 - __main__ - INFO - Progression: 0.1% (15360/12432396 bytes)
+2025-04-24 22:08:04,353 - __main__ - INFO - Progression: 0.3% (31744/12432396 bytes)
+2025-04-24 22:08:04,353 - __main__ - INFO - Force download du fichier: downloads\video_20250424_220310.mp4
+2025-04-24 22:08:04,354 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:04] "GET /download-file/20250424 HTTP/1.1" 200 -
+2025-04-24 22:08:04,355 - __main__ - INFO - Progression: 0.5% (64512/12432396 bytes)
+2025-04-24 22:08:04,358 - __main__ - INFO - Progression: 1.0% (130048/12432396 bytes)
+2025-04-24 22:08:04,365 - __main__ - INFO - Progression: 2.1% (261120/12432396 bytes)
+2025-04-24 22:08:04,387 - __main__ - INFO - Progression: 4.2% (523264/12432396 bytes)
+2025-04-24 22:08:04,442 - __main__ - INFO - Progression: 8.4% (1047552/12432396 bytes)
+2025-04-24 22:08:04,532 - __main__ - INFO - Progression: 16.9% (2096128/12432396 bytes)
+2025-04-24 22:08:04,709 - __main__ - INFO - Progression: 33.7% (4193280/12432396 bytes)
+2025-04-24 22:08:05,065 - __main__ - INFO - Progression: 67.5% (8387584/12432396 bytes)
+2025-04-24 22:08:05,230 - __main__ - INFO - Progression: 83.3% (10350204/12432396 bytes)
+2025-04-24 22:08:05,266 - __main__ - INFO - Progression: 83.3% (10351228/12432396 bytes)
+2025-04-24 22:08:05,267 - __main__ - INFO - Progression: 83.3% (10353276/12432396 bytes)
+2025-04-24 22:08:05,269 - __main__ - INFO - Progression: 83.3% (10357372/12432396 bytes)
+2025-04-24 22:08:05,271 - __main__ - INFO - Progression: 83.4% (10365564/12432396 bytes)
+2025-04-24 22:08:05,272 - __main__ - INFO - Progression: 83.5% (10381948/12432396 bytes)
+2025-04-24 22:08:05,274 - __main__ - INFO - Progression: 83.8% (10414716/12432396 bytes)
+2025-04-24 22:08:05,276 - __main__ - INFO - Progression: 84.3% (10480252/12432396 bytes)
+2025-04-24 22:08:05,288 - __main__ - INFO - Progression: 85.4% (10611324/12432396 bytes)
+2025-04-24 22:08:05,309 - __main__ - INFO - Progression: 87.5% (10873468/12432396 bytes)
+2025-04-24 22:08:05,354 - __main__ - INFO - Progression: 91.7% (11397756/12432396 bytes)
+2025-04-24 22:08:05,442 - __main__ - INFO - Progression: 100.0% (12432396/12432396 bytes)
+2025-04-24 22:08:05,444 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220759.f251.webm
+2025-04-24 22:08:05,712 - __main__ - ERROR - Erreur dans le thread de téléchargement: [WinError 183] Impossible de créer un fichier déjà existant: 'downloads\\video_20250424_220759.temp.mp4' -> 'downloads\\video_20250424_220759.mp4'
+2025-04-24 22:08:05,714 - __main__ - INFO - Fichier existant supprimé: downloads\video_20250424_220759.mp4
+2025-04-24 22:08:05,715 - __main__ - INFO - Fichier renommé manuellement: downloads\video_20250424_220759.temp.mp4 -> downloads\video_20250424_220759.mp4
+2025-04-24 22:08:16,506 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:16] "GET / HTTP/1.1" 200 -
+2025-04-24 22:08:20,093 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:08:20,094 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:08:20,094 - __main__ - INFO - ID vidéo extrait: 1C3KnSjAizo
+2025-04-24 22:08:20,095 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=1C3KnSjAizo
+2025-04-24 22:08:20,095 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:08:20,153 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:08:23,941 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:08:23,941 - __main__ - INFO - Nombre de formats trouvés: 20
+2025-04-24 22:08:24,152 - __main__ - INFO - Meilleur format audio trouvé: 129.48kbps - Taille réelle: 11563459 bytes
+2025-04-24 22:08:24,199 - __main__ - INFO - Meilleur format audio trouvé: 139.216kbps - Taille réelle: 12432396 bytes
+2025-04-24 22:08:24,199 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:08:24,566 - __main__ - INFO - Format audio trouvé: 129.48kbps - Taille: 11563459 bytes
+2025-04-24 22:08:24,612 - __main__ - INFO - Format audio trouvé: 139.216kbps - Taille: 12432396 bytes
+2025-04-24 22:08:24,830 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 9948618 bytes - Total avec audio: 22381014 bytes - Adaptatif: True
+2025-04-24 22:08:25,055 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 48786484 bytes - Total avec audio: 61218880 bytes - Adaptatif: True
+2025-04-24 22:08:25,195 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 60291663 bytes - Total avec audio: 60291663 bytes - Adaptatif: False
+2025-04-24 22:08:25,427 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 25990564 bytes - Total avec audio: 38422960 bytes - Adaptatif: True
+2025-04-24 22:08:25,472 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 178937974 bytes - Total avec audio: 191370370 bytes - Adaptatif: True
+2025-04-24 22:08:25,690 - __main__ - INFO - Format vidéo trouvé: 720p 60fps - Taille vidéo: 235948672 bytes - Total avec audio: 248381068 bytes - Adaptatif: True
+2025-04-24 22:08:25,903 - __main__ - INFO - Format vidéo trouvé: 1080p 60fps - Taille vidéo: 439600843 bytes - Total avec audio: 452033239 bytes - Adaptatif: True
+2025-04-24 22:08:25,905 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:08:25,906 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:25] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:08:29,567 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:29] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:08:29,567 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_220829.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x00000273502AE0C0>], 'merge_output_format': 'mp4'}
+2025-04-24 22:08:29,634 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:29] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:30,649 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:30] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:31,968 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:31] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:33,167 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:33] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:33,501 - __main__ - INFO - Progression: 0.0% (1024/235948672 bytes)
+2025-04-24 22:08:33,502 - __main__ - INFO - Progression: 0.0% (3072/235948672 bytes)
+2025-04-24 22:08:33,504 - __main__ - INFO - Progression: 0.0% (7168/235948672 bytes)
+2025-04-24 22:08:33,505 - __main__ - INFO - Progression: 0.0% (15360/235948672 bytes)
+2025-04-24 22:08:33,513 - __main__ - INFO - Progression: 0.0% (31744/235948672 bytes)
+2025-04-24 22:08:33,521 - __main__ - INFO - Progression: 0.0% (64512/235948672 bytes)
+2025-04-24 22:08:33,535 - __main__ - INFO - Progression: 0.1% (130048/235948672 bytes)
+2025-04-24 22:08:33,548 - __main__ - INFO - Progression: 0.1% (261120/235948672 bytes)
+2025-04-24 22:08:33,575 - __main__ - INFO - Progression: 0.2% (523264/235948672 bytes)
+2025-04-24 22:08:33,620 - __main__ - INFO - Progression: 0.4% (1047552/235948672 bytes)
+2025-04-24 22:08:33,708 - __main__ - INFO - Progression: 0.9% (2096128/235948672 bytes)
+2025-04-24 22:08:33,886 - __main__ - INFO - Progression: 1.8% (4193280/235948672 bytes)
+2025-04-24 22:08:34,192 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:34] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:34,242 - __main__ - INFO - Progression: 3.6% (8387584/235948672 bytes)
+2025-04-24 22:08:34,401 - __main__ - INFO - Progression: 4.4% (10276057/235948672 bytes)
+2025-04-24 22:08:34,539 - __main__ - INFO - Progression: 4.4% (10277081/235948672 bytes)
+2025-04-24 22:08:34,541 - __main__ - INFO - Progression: 4.4% (10279129/235948672 bytes)
+2025-04-24 22:08:34,542 - __main__ - INFO - Progression: 4.4% (10283225/235948672 bytes)
+2025-04-24 22:08:34,544 - __main__ - INFO - Progression: 4.4% (10291417/235948672 bytes)
+2025-04-24 22:08:34,545 - __main__ - INFO - Progression: 4.4% (10307801/235948672 bytes)
+2025-04-24 22:08:34,547 - __main__ - INFO - Progression: 4.4% (10340569/235948672 bytes)
+2025-04-24 22:08:34,549 - __main__ - INFO - Progression: 4.4% (10406105/235948672 bytes)
+2025-04-24 22:08:34,649 - __main__ - INFO - Progression: 4.5% (10537177/235948672 bytes)
+2025-04-24 22:08:34,671 - __main__ - INFO - Progression: 4.6% (10799321/235948672 bytes)
+2025-04-24 22:08:34,716 - __main__ - INFO - Progression: 4.8% (11323609/235948672 bytes)
+2025-04-24 22:08:34,804 - __main__ - INFO - Progression: 5.2% (12372185/235948672 bytes)
+2025-04-24 22:08:34,982 - __main__ - INFO - Progression: 6.1% (14469337/235948672 bytes)
+2025-04-24 22:08:35,204 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:35] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:35,338 - __main__ - INFO - Progression: 7.9% (18663641/235948672 bytes)
+2025-04-24 22:08:35,486 - __main__ - INFO - Progression: 8.7% (20440444/235948672 bytes)
+2025-04-24 22:08:35,519 - __main__ - INFO - Progression: 8.7% (20441468/235948672 bytes)
+2025-04-24 22:08:35,520 - __main__ - INFO - Progression: 8.7% (20443516/235948672 bytes)
+2025-04-24 22:08:35,522 - __main__ - INFO - Progression: 8.7% (20447612/235948672 bytes)
+2025-04-24 22:08:35,523 - __main__ - INFO - Progression: 8.7% (20455804/235948672 bytes)
+2025-04-24 22:08:35,525 - __main__ - INFO - Progression: 8.7% (20472188/235948672 bytes)
+2025-04-24 22:08:35,527 - __main__ - INFO - Progression: 8.7% (20504956/235948672 bytes)
+2025-04-24 22:08:35,529 - __main__ - INFO - Progression: 8.7% (20570492/235948672 bytes)
+2025-04-24 22:08:35,540 - __main__ - INFO - Progression: 8.8% (20701564/235948672 bytes)
+2025-04-24 22:08:35,562 - __main__ - INFO - Progression: 8.9% (20963708/235948672 bytes)
+2025-04-24 22:08:35,906 - __main__ - INFO - Progression: 9.1% (21487996/235948672 bytes)
+2025-04-24 22:08:35,995 - __main__ - INFO - Progression: 9.6% (22536572/235948672 bytes)
+2025-04-24 22:08:36,173 - __main__ - INFO - Progression: 10.4% (24633724/235948672 bytes)
+2025-04-24 22:08:36,227 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:36] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:36,529 - __main__ - INFO - Progression: 12.2% (28828028/235948672 bytes)
+2025-04-24 22:08:36,664 - __main__ - INFO - Progression: 12.9% (30449581/235948672 bytes)
+2025-04-24 22:08:36,796 - __main__ - INFO - Progression: 12.9% (30450605/235948672 bytes)
+2025-04-24 22:08:36,798 - __main__ - INFO - Progression: 12.9% (30452653/235948672 bytes)
+2025-04-24 22:08:36,799 - __main__ - INFO - Progression: 12.9% (30456749/235948672 bytes)
+2025-04-24 22:08:36,801 - __main__ - INFO - Progression: 12.9% (30464941/235948672 bytes)
+2025-04-24 22:08:36,802 - __main__ - INFO - Progression: 12.9% (30481325/235948672 bytes)
+2025-04-24 22:08:36,804 - __main__ - INFO - Progression: 12.9% (30514093/235948672 bytes)
+2025-04-24 22:08:36,806 - __main__ - INFO - Progression: 13.0% (30579629/235948672 bytes)
+2025-04-24 22:08:36,817 - __main__ - INFO - Progression: 13.0% (30710701/235948672 bytes)
+2025-04-24 22:08:36,839 - __main__ - INFO - Progression: 13.1% (30972845/235948672 bytes)
+2025-04-24 22:08:36,884 - __main__ - INFO - Progression: 13.3% (31497133/235948672 bytes)
+2025-04-24 22:08:36,973 - __main__ - INFO - Progression: 13.8% (32545709/235948672 bytes)
+2025-04-24 22:08:37,151 - __main__ - INFO - Progression: 14.7% (34642861/235948672 bytes)
+2025-04-24 22:08:37,235 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:37] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:37,507 - __main__ - INFO - Progression: 16.5% (38837165/235948672 bytes)
+2025-04-24 22:08:37,673 - __main__ - INFO - Progression: 17.3% (40821822/235948672 bytes)
+2025-04-24 22:08:37,818 - __main__ - INFO - Progression: 17.3% (40822846/235948672 bytes)
+2025-04-24 22:08:37,820 - __main__ - INFO - Progression: 17.3% (40824894/235948672 bytes)
+2025-04-24 22:08:37,821 - __main__ - INFO - Progression: 17.3% (40828990/235948672 bytes)
+2025-04-24 22:08:37,823 - __main__ - INFO - Progression: 17.3% (40837182/235948672 bytes)
+2025-04-24 22:08:37,825 - __main__ - INFO - Progression: 17.3% (40853566/235948672 bytes)
+2025-04-24 22:08:37,827 - __main__ - INFO - Progression: 17.3% (40886334/235948672 bytes)
+2025-04-24 22:08:37,828 - __main__ - INFO - Progression: 17.4% (40951870/235948672 bytes)
+2025-04-24 22:08:37,839 - __main__ - INFO - Progression: 17.4% (41082942/235948672 bytes)
+2025-04-24 22:08:37,861 - __main__ - INFO - Progression: 17.5% (41345086/235948672 bytes)
+2025-04-24 22:08:37,906 - __main__ - INFO - Progression: 17.7% (41869374/235948672 bytes)
+2025-04-24 22:08:37,995 - __main__ - INFO - Progression: 18.2% (42917950/235948672 bytes)
+2025-04-24 22:08:38,173 - __main__ - INFO - Progression: 19.1% (45015102/235948672 bytes)
+2025-04-24 22:08:38,245 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:38] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:38,528 - __main__ - INFO - Progression: 20.9% (49209406/235948672 bytes)
+2025-04-24 22:08:38,780 - __main__ - INFO - Progression: 21.5% (50800350/235948672 bytes)
+2025-04-24 22:08:38,874 - __main__ - INFO - Progression: 21.5% (50801374/235948672 bytes)
+2025-04-24 22:08:38,876 - __main__ - INFO - Progression: 21.5% (50803422/235948672 bytes)
+2025-04-24 22:08:38,877 - __main__ - INFO - Progression: 21.5% (50807518/235948672 bytes)
+2025-04-24 22:08:38,878 - __main__ - INFO - Progression: 21.5% (50815710/235948672 bytes)
+2025-04-24 22:08:38,880 - __main__ - INFO - Progression: 21.5% (50832094/235948672 bytes)
+2025-04-24 22:08:38,882 - __main__ - INFO - Progression: 21.6% (50864862/235948672 bytes)
+2025-04-24 22:08:38,884 - __main__ - INFO - Progression: 21.6% (50930398/235948672 bytes)
+2025-04-24 22:08:38,895 - __main__ - INFO - Progression: 21.6% (51061470/235948672 bytes)
+2025-04-24 22:08:38,917 - __main__ - INFO - Progression: 21.8% (51323614/235948672 bytes)
+2025-04-24 22:08:38,962 - __main__ - INFO - Progression: 22.0% (51847902/235948672 bytes)
+2025-04-24 22:08:39,051 - __main__ - INFO - Progression: 22.4% (52896478/235948672 bytes)
+2025-04-24 22:08:39,229 - __main__ - INFO - Progression: 23.3% (54993630/235948672 bytes)
+2025-04-24 22:08:39,267 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:39] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:39,585 - __main__ - INFO - Progression: 25.1% (59187934/235948672 bytes)
+2025-04-24 22:08:39,745 - __main__ - INFO - Progression: 25.9% (61102020/235948672 bytes)
+2025-04-24 22:08:39,899 - __main__ - INFO - Progression: 25.9% (61103044/235948672 bytes)
+2025-04-24 22:08:39,901 - __main__ - INFO - Progression: 25.9% (61105092/235948672 bytes)
+2025-04-24 22:08:39,902 - __main__ - INFO - Progression: 25.9% (61109188/235948672 bytes)
+2025-04-24 22:08:39,903 - __main__ - INFO - Progression: 25.9% (61117380/235948672 bytes)
+2025-04-24 22:08:39,905 - __main__ - INFO - Progression: 25.9% (61133764/235948672 bytes)
+2025-04-24 22:08:39,907 - __main__ - INFO - Progression: 25.9% (61166532/235948672 bytes)
+2025-04-24 22:08:39,909 - __main__ - INFO - Progression: 26.0% (61232068/235948672 bytes)
+2025-04-24 22:08:39,920 - __main__ - INFO - Progression: 26.0% (61363140/235948672 bytes)
+2025-04-24 22:08:39,943 - __main__ - INFO - Progression: 26.1% (61625284/235948672 bytes)
+2025-04-24 22:08:39,987 - __main__ - INFO - Progression: 26.3% (62149572/235948672 bytes)
+2025-04-24 22:08:40,077 - __main__ - INFO - Progression: 26.8% (63198148/235948672 bytes)
+2025-04-24 22:08:40,254 - __main__ - INFO - Progression: 27.7% (65295300/235948672 bytes)
+2025-04-24 22:08:40,290 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:40] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:40,612 - __main__ - INFO - Progression: 29.5% (69489604/235948672 bytes)
+2025-04-24 22:08:40,765 - __main__ - INFO - Progression: 30.2% (71336328/235948672 bytes)
+2025-04-24 22:08:40,810 - __main__ - INFO - Progression: 30.2% (71337352/235948672 bytes)
+2025-04-24 22:08:40,812 - __main__ - INFO - Progression: 30.2% (71339400/235948672 bytes)
+2025-04-24 22:08:40,814 - __main__ - INFO - Progression: 30.2% (71343496/235948672 bytes)
+2025-04-24 22:08:40,815 - __main__ - INFO - Progression: 30.2% (71351688/235948672 bytes)
+2025-04-24 22:08:40,817 - __main__ - INFO - Progression: 30.2% (71368072/235948672 bytes)
+2025-04-24 22:08:40,818 - __main__ - INFO - Progression: 30.3% (71400840/235948672 bytes)
+2025-04-24 22:08:40,820 - __main__ - INFO - Progression: 30.3% (71466376/235948672 bytes)
+2025-04-24 22:08:40,831 - __main__ - INFO - Progression: 30.3% (71597448/235948672 bytes)
+2025-04-24 22:08:40,853 - __main__ - INFO - Progression: 30.5% (71859592/235948672 bytes)
+2025-04-24 22:08:40,898 - __main__ - INFO - Progression: 30.7% (72383880/235948672 bytes)
+2025-04-24 22:08:40,987 - __main__ - INFO - Progression: 31.1% (73432456/235948672 bytes)
+2025-04-24 22:08:41,164 - __main__ - INFO - Progression: 32.0% (75529608/235948672 bytes)
+2025-04-24 22:08:41,311 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:41] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:41,520 - __main__ - INFO - Progression: 33.8% (79723912/235948672 bytes)
+2025-04-24 22:08:41,688 - __main__ - INFO - Progression: 34.6% (81716766/235948672 bytes)
+2025-04-24 22:08:41,708 - __main__ - INFO - Progression: 34.6% (81717790/235948672 bytes)
+2025-04-24 22:08:41,710 - __main__ - INFO - Progression: 34.6% (81719838/235948672 bytes)
+2025-04-24 22:08:41,711 - __main__ - INFO - Progression: 34.6% (81723934/235948672 bytes)
+2025-04-24 22:08:41,713 - __main__ - INFO - Progression: 34.6% (81732126/235948672 bytes)
+2025-04-24 22:08:41,715 - __main__ - INFO - Progression: 34.6% (81748510/235948672 bytes)
+2025-04-24 22:08:41,717 - __main__ - INFO - Progression: 34.7% (81781278/235948672 bytes)
+2025-04-24 22:08:41,732 - __main__ - INFO - Progression: 34.7% (81846814/235948672 bytes)
+2025-04-24 22:08:41,743 - __main__ - INFO - Progression: 34.7% (81977886/235948672 bytes)
+2025-04-24 22:08:41,765 - __main__ - INFO - Progression: 34.9% (82240030/235948672 bytes)
+2025-04-24 22:08:41,810 - __main__ - INFO - Progression: 35.1% (82764318/235948672 bytes)
+2025-04-24 22:08:41,899 - __main__ - INFO - Progression: 35.5% (83812894/235948672 bytes)
+2025-04-24 22:08:42,077 - __main__ - INFO - Progression: 36.4% (85910046/235948672 bytes)
+2025-04-24 22:08:42,324 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:42] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:42,432 - __main__ - INFO - Progression: 38.2% (90104350/235948672 bytes)
+2025-04-24 22:08:42,589 - __main__ - INFO - Progression: 39.0% (91973811/235948672 bytes)
+2025-04-24 22:08:42,611 - __main__ - INFO - Progression: 39.0% (91974835/235948672 bytes)
+2025-04-24 22:08:42,612 - __main__ - INFO - Progression: 39.0% (91976883/235948672 bytes)
+2025-04-24 22:08:42,614 - __main__ - INFO - Progression: 39.0% (91980979/235948672 bytes)
+2025-04-24 22:08:42,616 - __main__ - INFO - Progression: 39.0% (91989171/235948672 bytes)
+2025-04-24 22:08:42,618 - __main__ - INFO - Progression: 39.0% (92005555/235948672 bytes)
+2025-04-24 22:08:42,620 - __main__ - INFO - Progression: 39.0% (92038323/235948672 bytes)
+2025-04-24 22:08:42,621 - __main__ - INFO - Progression: 39.0% (92103859/235948672 bytes)
+2025-04-24 22:08:42,632 - __main__ - INFO - Progression: 39.1% (92234931/235948672 bytes)
+2025-04-24 22:08:42,677 - __main__ - INFO - Progression: 39.2% (92497075/235948672 bytes)
+2025-04-24 22:08:42,722 - __main__ - INFO - Progression: 39.4% (93021363/235948672 bytes)
+2025-04-24 22:08:42,811 - __main__ - INFO - Progression: 39.9% (94069939/235948672 bytes)
+2025-04-24 22:08:42,989 - __main__ - INFO - Progression: 40.8% (96167091/235948672 bytes)
+2025-04-24 22:08:43,336 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:43] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:43,345 - __main__ - INFO - Progression: 42.5% (100361395/235948672 bytes)
+2025-04-24 22:08:43,519 - __main__ - INFO - Progression: 43.4% (102441758/235948672 bytes)
+2025-04-24 22:08:43,663 - __main__ - INFO - Progression: 43.4% (102442782/235948672 bytes)
+2025-04-24 22:08:43,664 - __main__ - INFO - Progression: 43.4% (102444830/235948672 bytes)
+2025-04-24 22:08:43,666 - __main__ - INFO - Progression: 43.4% (102448926/235948672 bytes)
+2025-04-24 22:08:43,667 - __main__ - INFO - Progression: 43.4% (102457118/235948672 bytes)
+2025-04-24 22:08:43,669 - __main__ - INFO - Progression: 43.4% (102473502/235948672 bytes)
+2025-04-24 22:08:43,670 - __main__ - INFO - Progression: 43.4% (102506270/235948672 bytes)
+2025-04-24 22:08:43,673 - __main__ - INFO - Progression: 43.5% (102571806/235948672 bytes)
+2025-04-24 22:08:43,684 - __main__ - INFO - Progression: 43.5% (102702878/235948672 bytes)
+2025-04-24 22:08:43,770 - __main__ - INFO - Progression: 43.6% (102965022/235948672 bytes)
+2025-04-24 22:08:43,871 - __main__ - INFO - Progression: 43.9% (103489310/235948672 bytes)
+2025-04-24 22:08:44,023 - __main__ - INFO - Progression: 44.3% (104537886/235948672 bytes)
+2025-04-24 22:08:44,201 - __main__ - INFO - Progression: 45.2% (106635038/235948672 bytes)
+2025-04-24 22:08:44,357 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:44] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:44,556 - __main__ - INFO - Progression: 47.0% (110829342/235948672 bytes)
+2025-04-24 22:08:44,709 - __main__ - INFO - Progression: 47.7% (112648145/235948672 bytes)
+2025-04-24 22:08:44,749 - __main__ - INFO - Progression: 47.7% (112649169/235948672 bytes)
+2025-04-24 22:08:44,751 - __main__ - INFO - Progression: 47.7% (112651217/235948672 bytes)
+2025-04-24 22:08:44,752 - __main__ - INFO - Progression: 47.7% (112655313/235948672 bytes)
+2025-04-24 22:08:44,754 - __main__ - INFO - Progression: 47.7% (112663505/235948672 bytes)
+2025-04-24 22:08:44,756 - __main__ - INFO - Progression: 47.8% (112679889/235948672 bytes)
+2025-04-24 22:08:44,757 - __main__ - INFO - Progression: 47.8% (112712657/235948672 bytes)
+2025-04-24 22:08:44,759 - __main__ - INFO - Progression: 47.8% (112778193/235948672 bytes)
+2025-04-24 22:08:44,770 - __main__ - INFO - Progression: 47.9% (112909265/235948672 bytes)
+2025-04-24 22:08:44,792 - __main__ - INFO - Progression: 48.0% (113171409/235948672 bytes)
+2025-04-24 22:08:44,886 - __main__ - INFO - Progression: 48.2% (113695697/235948672 bytes)
+2025-04-24 22:08:44,975 - __main__ - INFO - Progression: 48.6% (114744273/235948672 bytes)
+2025-04-24 22:08:45,153 - __main__ - INFO - Progression: 49.5% (116841425/235948672 bytes)
+2025-04-24 22:08:45,379 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:45] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:45,508 - __main__ - INFO - Progression: 51.3% (121035729/235948672 bytes)
+2025-04-24 22:08:45,673 - __main__ - INFO - Progression: 52.1% (123002546/235948672 bytes)
+2025-04-24 22:08:45,711 - __main__ - INFO - Progression: 52.1% (123003570/235948672 bytes)
+2025-04-24 22:08:45,712 - __main__ - INFO - Progression: 52.1% (123005618/235948672 bytes)
+2025-04-24 22:08:45,713 - __main__ - INFO - Progression: 52.1% (123009714/235948672 bytes)
+2025-04-24 22:08:45,715 - __main__ - INFO - Progression: 52.1% (123017906/235948672 bytes)
+2025-04-24 22:08:45,717 - __main__ - INFO - Progression: 52.1% (123034290/235948672 bytes)
+2025-04-24 22:08:45,719 - __main__ - INFO - Progression: 52.2% (123067058/235948672 bytes)
+2025-04-24 22:08:45,721 - __main__ - INFO - Progression: 52.2% (123132594/235948672 bytes)
+2025-04-24 22:08:45,732 - __main__ - INFO - Progression: 52.2% (123263666/235948672 bytes)
+2025-04-24 22:08:45,754 - __main__ - INFO - Progression: 52.4% (123525810/235948672 bytes)
+2025-04-24 22:08:45,799 - __main__ - INFO - Progression: 52.6% (124050098/235948672 bytes)
+2025-04-24 22:08:45,888 - __main__ - INFO - Progression: 53.0% (125098674/235948672 bytes)
+2025-04-24 22:08:46,066 - __main__ - INFO - Progression: 53.9% (127195826/235948672 bytes)
+2025-04-24 22:08:46,399 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:46] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:46,422 - __main__ - INFO - Progression: 55.7% (131390130/235948672 bytes)
+2025-04-24 22:08:46,574 - __main__ - INFO - Progression: 56.5% (133211310/235948672 bytes)
+2025-04-24 22:08:46,736 - __main__ - INFO - Progression: 56.5% (133212334/235948672 bytes)
+2025-04-24 22:08:46,738 - __main__ - INFO - Progression: 56.5% (133214382/235948672 bytes)
+2025-04-24 22:08:46,740 - __main__ - INFO - Progression: 56.5% (133218478/235948672 bytes)
+2025-04-24 22:08:46,742 - __main__ - INFO - Progression: 56.5% (133226670/235948672 bytes)
+2025-04-24 22:08:46,743 - __main__ - INFO - Progression: 56.5% (133243054/235948672 bytes)
+2025-04-24 22:08:46,745 - __main__ - INFO - Progression: 56.5% (133275822/235948672 bytes)
+2025-04-24 22:08:46,747 - __main__ - INFO - Progression: 56.5% (133341358/235948672 bytes)
+2025-04-24 22:08:46,757 - __main__ - INFO - Progression: 56.6% (133472430/235948672 bytes)
+2025-04-24 22:08:46,779 - __main__ - INFO - Progression: 56.7% (133734574/235948672 bytes)
+2025-04-24 22:08:46,824 - __main__ - INFO - Progression: 56.9% (134258862/235948672 bytes)
+2025-04-24 22:08:46,913 - __main__ - INFO - Progression: 57.3% (135307438/235948672 bytes)
+2025-04-24 22:08:47,091 - __main__ - INFO - Progression: 58.2% (137404590/235948672 bytes)
+2025-04-24 22:08:47,417 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:47] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:47,604 - __main__ - INFO - Progression: 60.0% (141598894/235948672 bytes)
+2025-04-24 22:08:47,740 - __main__ - INFO - Progression: 60.7% (143232173/235948672 bytes)
+2025-04-24 22:08:47,777 - __main__ - INFO - Progression: 60.7% (143233197/235948672 bytes)
+2025-04-24 22:08:47,779 - __main__ - INFO - Progression: 60.7% (143235245/235948672 bytes)
+2025-04-24 22:08:47,780 - __main__ - INFO - Progression: 60.7% (143239341/235948672 bytes)
+2025-04-24 22:08:47,782 - __main__ - INFO - Progression: 60.7% (143247533/235948672 bytes)
+2025-04-24 22:08:47,783 - __main__ - INFO - Progression: 60.7% (143263917/235948672 bytes)
+2025-04-24 22:08:47,785 - __main__ - INFO - Progression: 60.7% (143296685/235948672 bytes)
+2025-04-24 22:08:47,787 - __main__ - INFO - Progression: 60.8% (143362221/235948672 bytes)
+2025-04-24 22:08:47,798 - __main__ - INFO - Progression: 60.8% (143493293/235948672 bytes)
+2025-04-24 22:08:47,821 - __main__ - INFO - Progression: 60.9% (143755437/235948672 bytes)
+2025-04-24 22:08:47,865 - __main__ - INFO - Progression: 61.1% (144279725/235948672 bytes)
+2025-04-24 22:08:47,955 - __main__ - INFO - Progression: 61.6% (145328301/235948672 bytes)
+2025-04-24 22:08:48,133 - __main__ - INFO - Progression: 62.5% (147425453/235948672 bytes)
+2025-04-24 22:08:48,436 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:48] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:48,488 - __main__ - INFO - Progression: 64.3% (151619757/235948672 bytes)
+2025-04-24 22:08:48,646 - __main__ - INFO - Progression: 65.1% (153505832/235948672 bytes)
+2025-04-24 22:08:48,700 - __main__ - INFO - Progression: 65.1% (153506856/235948672 bytes)
+2025-04-24 22:08:48,705 - __main__ - INFO - Progression: 65.1% (153508904/235948672 bytes)
+2025-04-24 22:08:48,708 - __main__ - INFO - Progression: 65.1% (153513000/235948672 bytes)
+2025-04-24 22:08:48,710 - __main__ - INFO - Progression: 65.1% (153521192/235948672 bytes)
+2025-04-24 22:08:48,712 - __main__ - INFO - Progression: 65.1% (153537576/235948672 bytes)
+2025-04-24 22:08:48,713 - __main__ - INFO - Progression: 65.1% (153570344/235948672 bytes)
+2025-04-24 22:08:48,715 - __main__ - INFO - Progression: 65.1% (153635880/235948672 bytes)
+2025-04-24 22:08:48,720 - __main__ - INFO - Progression: 65.2% (153766952/235948672 bytes)
+2025-04-24 22:08:48,742 - __main__ - INFO - Progression: 65.3% (154029096/235948672 bytes)
+2025-04-24 22:08:48,786 - __main__ - INFO - Progression: 65.5% (154553384/235948672 bytes)
+2025-04-24 22:08:48,876 - __main__ - INFO - Progression: 65.9% (155601960/235948672 bytes)
+2025-04-24 22:08:49,139 - __main__ - INFO - Progression: 66.8% (157699112/235948672 bytes)
+2025-04-24 22:08:49,449 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:49] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:49,530 - __main__ - INFO - Progression: 68.6% (161893416/235948672 bytes)
+2025-04-24 22:08:49,684 - __main__ - INFO - Progression: 69.4% (163736154/235948672 bytes)
+2025-04-24 22:08:49,832 - __main__ - INFO - Progression: 69.4% (163737178/235948672 bytes)
+2025-04-24 22:08:49,833 - __main__ - INFO - Progression: 69.4% (163739226/235948672 bytes)
+2025-04-24 22:08:49,835 - __main__ - INFO - Progression: 69.4% (163743322/235948672 bytes)
+2025-04-24 22:08:49,836 - __main__ - INFO - Progression: 69.4% (163751514/235948672 bytes)
+2025-04-24 22:08:49,838 - __main__ - INFO - Progression: 69.4% (163767898/235948672 bytes)
+2025-04-24 22:08:49,840 - __main__ - INFO - Progression: 69.4% (163800666/235948672 bytes)
+2025-04-24 22:08:49,841 - __main__ - INFO - Progression: 69.4% (163866202/235948672 bytes)
+2025-04-24 22:08:49,852 - __main__ - INFO - Progression: 69.5% (163997274/235948672 bytes)
+2025-04-24 22:08:49,875 - __main__ - INFO - Progression: 69.6% (164259418/235948672 bytes)
+2025-04-24 22:08:49,919 - __main__ - INFO - Progression: 69.8% (164783706/235948672 bytes)
+2025-04-24 22:08:50,009 - __main__ - INFO - Progression: 70.3% (165832282/235948672 bytes)
+2025-04-24 22:08:50,186 - __main__ - INFO - Progression: 71.2% (167929434/235948672 bytes)
+2025-04-24 22:08:50,470 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:50] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:50,665 - __main__ - INFO - Progression: 72.9% (172123738/235948672 bytes)
+2025-04-24 22:08:50,809 - __main__ - INFO - Progression: 73.7% (173844861/235948672 bytes)
+2025-04-24 22:08:50,847 - __main__ - INFO - Progression: 73.7% (173845885/235948672 bytes)
+2025-04-24 22:08:50,848 - __main__ - INFO - Progression: 73.7% (173847933/235948672 bytes)
+2025-04-24 22:08:50,850 - __main__ - INFO - Progression: 73.7% (173852029/235948672 bytes)
+2025-04-24 22:08:50,852 - __main__ - INFO - Progression: 73.7% (173860221/235948672 bytes)
+2025-04-24 22:08:50,853 - __main__ - INFO - Progression: 73.7% (173876605/235948672 bytes)
+2025-04-24 22:08:50,855 - __main__ - INFO - Progression: 73.7% (173909373/235948672 bytes)
+2025-04-24 22:08:50,857 - __main__ - INFO - Progression: 73.7% (173974909/235948672 bytes)
+2025-04-24 22:08:50,889 - __main__ - INFO - Progression: 73.8% (174105981/235948672 bytes)
+2025-04-24 22:08:50,912 - __main__ - INFO - Progression: 73.9% (174368125/235948672 bytes)
+2025-04-24 22:08:50,956 - __main__ - INFO - Progression: 74.1% (174892413/235948672 bytes)
+2025-04-24 22:08:51,045 - __main__ - INFO - Progression: 74.6% (175940989/235948672 bytes)
+2025-04-24 22:08:51,285 - __main__ - INFO - Progression: 75.5% (178038141/235948672 bytes)
+2025-04-24 22:08:51,486 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:51] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:51,641 - __main__ - INFO - Progression: 77.2% (182232445/235948672 bytes)
+2025-04-24 22:08:51,792 - __main__ - INFO - Progression: 78.0% (184040331/235948672 bytes)
+2025-04-24 22:08:51,938 - __main__ - INFO - Progression: 78.0% (184041355/235948672 bytes)
+2025-04-24 22:08:51,939 - __main__ - INFO - Progression: 78.0% (184043403/235948672 bytes)
+2025-04-24 22:08:51,940 - __main__ - INFO - Progression: 78.0% (184047499/235948672 bytes)
+2025-04-24 22:08:51,942 - __main__ - INFO - Progression: 78.0% (184055691/235948672 bytes)
+2025-04-24 22:08:51,943 - __main__ - INFO - Progression: 78.0% (184072075/235948672 bytes)
+2025-04-24 22:08:51,945 - __main__ - INFO - Progression: 78.0% (184104843/235948672 bytes)
+2025-04-24 22:08:51,947 - __main__ - INFO - Progression: 78.1% (184170379/235948672 bytes)
+2025-04-24 22:08:51,958 - __main__ - INFO - Progression: 78.1% (184301451/235948672 bytes)
+2025-04-24 22:08:52,182 - __main__ - INFO - Progression: 78.2% (184563595/235948672 bytes)
+2025-04-24 22:08:52,226 - __main__ - INFO - Progression: 78.4% (185087883/235948672 bytes)
+2025-04-24 22:08:52,316 - __main__ - INFO - Progression: 78.9% (186136459/235948672 bytes)
+2025-04-24 22:08:52,493 - __main__ - INFO - Progression: 79.8% (188233611/235948672 bytes)
+2025-04-24 22:08:52,506 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:52] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:52,849 - __main__ - INFO - Progression: 81.6% (192427915/235948672 bytes)
+2025-04-24 22:08:53,018 - __main__ - INFO - Progression: 82.4% (194443704/235948672 bytes)
+2025-04-24 22:08:53,162 - __main__ - INFO - Progression: 82.4% (194444728/235948672 bytes)
+2025-04-24 22:08:53,164 - __main__ - INFO - Progression: 82.4% (194446776/235948672 bytes)
+2025-04-24 22:08:53,165 - __main__ - INFO - Progression: 82.4% (194450872/235948672 bytes)
+2025-04-24 22:08:53,166 - __main__ - INFO - Progression: 82.4% (194459064/235948672 bytes)
+2025-04-24 22:08:53,168 - __main__ - INFO - Progression: 82.4% (194475448/235948672 bytes)
+2025-04-24 22:08:53,170 - __main__ - INFO - Progression: 82.4% (194508216/235948672 bytes)
+2025-04-24 22:08:53,172 - __main__ - INFO - Progression: 82.5% (194573752/235948672 bytes)
+2025-04-24 22:08:53,183 - __main__ - INFO - Progression: 82.5% (194704824/235948672 bytes)
+2025-04-24 22:08:53,205 - __main__ - INFO - Progression: 82.6% (194966968/235948672 bytes)
+2025-04-24 22:08:53,250 - __main__ - INFO - Progression: 82.9% (195491256/235948672 bytes)
+2025-04-24 22:08:53,339 - __main__ - INFO - Progression: 83.3% (196539832/235948672 bytes)
+2025-04-24 22:08:53,517 - __main__ - INFO - Progression: 84.2% (198636984/235948672 bytes)
+2025-04-24 22:08:53,522 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:53] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:53,872 - __main__ - INFO - Progression: 86.0% (202831288/235948672 bytes)
+2025-04-24 22:08:54,029 - __main__ - INFO - Progression: 86.8% (204702535/235948672 bytes)
+2025-04-24 22:08:54,152 - __main__ - INFO - Progression: 86.8% (204703559/235948672 bytes)
+2025-04-24 22:08:54,153 - __main__ - INFO - Progression: 86.8% (204705607/235948672 bytes)
+2025-04-24 22:08:54,154 - __main__ - INFO - Progression: 86.8% (204709703/235948672 bytes)
+2025-04-24 22:08:54,155 - __main__ - INFO - Progression: 86.8% (204717895/235948672 bytes)
+2025-04-24 22:08:54,157 - __main__ - INFO - Progression: 86.8% (204734279/235948672 bytes)
+2025-04-24 22:08:54,159 - __main__ - INFO - Progression: 86.8% (204767047/235948672 bytes)
+2025-04-24 22:08:54,162 - __main__ - INFO - Progression: 86.8% (204832583/235948672 bytes)
+2025-04-24 22:08:54,173 - __main__ - INFO - Progression: 86.9% (204963655/235948672 bytes)
+2025-04-24 22:08:54,195 - __main__ - INFO - Progression: 87.0% (205225799/235948672 bytes)
+2025-04-24 22:08:54,323 - __main__ - INFO - Progression: 87.2% (205750087/235948672 bytes)
+2025-04-24 22:08:54,469 - __main__ - INFO - Progression: 87.6% (206798663/235948672 bytes)
+2025-04-24 22:08:54,536 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:54] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:54,647 - __main__ - INFO - Progression: 88.5% (208895815/235948672 bytes)
+2025-04-24 22:08:55,003 - __main__ - INFO - Progression: 90.3% (213090119/235948672 bytes)
+2025-04-24 22:08:55,164 - __main__ - INFO - Progression: 91.1% (215015065/235948672 bytes)
+2025-04-24 22:08:55,317 - __main__ - INFO - Progression: 91.1% (215016089/235948672 bytes)
+2025-04-24 22:08:55,319 - __main__ - INFO - Progression: 91.1% (215018137/235948672 bytes)
+2025-04-24 22:08:55,320 - __main__ - INFO - Progression: 91.1% (215022233/235948672 bytes)
+2025-04-24 22:08:55,322 - __main__ - INFO - Progression: 91.1% (215030425/235948672 bytes)
+2025-04-24 22:08:55,323 - __main__ - INFO - Progression: 91.1% (215046809/235948672 bytes)
+2025-04-24 22:08:55,325 - __main__ - INFO - Progression: 91.2% (215079577/235948672 bytes)
+2025-04-24 22:08:55,327 - __main__ - INFO - Progression: 91.2% (215145113/235948672 bytes)
+2025-04-24 22:08:55,338 - __main__ - INFO - Progression: 91.2% (215276185/235948672 bytes)
+2025-04-24 22:08:55,360 - __main__ - INFO - Progression: 91.3% (215538329/235948672 bytes)
+2025-04-24 22:08:55,413 - __main__ - INFO - Progression: 91.6% (216062617/235948672 bytes)
+2025-04-24 22:08:55,502 - __main__ - INFO - Progression: 92.0% (217111193/235948672 bytes)
+2025-04-24 22:08:55,551 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:55] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:55,680 - __main__ - INFO - Progression: 92.9% (219208345/235948672 bytes)
+2025-04-24 22:08:56,036 - __main__ - INFO - Progression: 94.7% (223402649/235948672 bytes)
+2025-04-24 22:08:56,172 - __main__ - INFO - Progression: 95.4% (225036249/235948672 bytes)
+2025-04-24 22:08:56,319 - __main__ - INFO - Progression: 95.4% (225037273/235948672 bytes)
+2025-04-24 22:08:56,321 - __main__ - INFO - Progression: 95.4% (225039321/235948672 bytes)
+2025-04-24 22:08:56,322 - __main__ - INFO - Progression: 95.4% (225043417/235948672 bytes)
+2025-04-24 22:08:56,324 - __main__ - INFO - Progression: 95.4% (225051609/235948672 bytes)
+2025-04-24 22:08:56,325 - __main__ - INFO - Progression: 95.4% (225067993/235948672 bytes)
+2025-04-24 22:08:56,327 - __main__ - INFO - Progression: 95.4% (225100761/235948672 bytes)
+2025-04-24 22:08:56,329 - __main__ - INFO - Progression: 95.4% (225166297/235948672 bytes)
+2025-04-24 22:08:56,340 - __main__ - INFO - Progression: 95.5% (225297369/235948672 bytes)
+2025-04-24 22:08:56,362 - __main__ - INFO - Progression: 95.6% (225559513/235948672 bytes)
+2025-04-24 22:08:56,407 - __main__ - INFO - Progression: 95.8% (226083801/235948672 bytes)
+2025-04-24 22:08:56,497 - __main__ - INFO - Progression: 96.3% (227132377/235948672 bytes)
+2025-04-24 22:08:56,573 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:56] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:56,676 - __main__ - INFO - Progression: 97.2% (229229529/235948672 bytes)
+2025-04-24 22:08:57,032 - __main__ - INFO - Progression: 98.9% (233423833/235948672 bytes)
+2025-04-24 22:08:57,190 - __main__ - INFO - Progression: 99.7% (235311179/235948672 bytes)
+2025-04-24 22:08:57,261 - __main__ - INFO - Progression: 99.7% (235312203/235948672 bytes)
+2025-04-24 22:08:57,263 - __main__ - INFO - Progression: 99.7% (235314251/235948672 bytes)
+2025-04-24 22:08:57,264 - __main__ - INFO - Progression: 99.7% (235318347/235948672 bytes)
+2025-04-24 22:08:57,265 - __main__ - INFO - Progression: 99.7% (235326539/235948672 bytes)
+2025-04-24 22:08:57,267 - __main__ - INFO - Progression: 99.7% (235342923/235948672 bytes)
+2025-04-24 22:08:57,268 - __main__ - INFO - Progression: 99.8% (235375691/235948672 bytes)
+2025-04-24 22:08:57,270 - __main__ - INFO - Progression: 99.8% (235441227/235948672 bytes)
+2025-04-24 22:08:57,282 - __main__ - INFO - Progression: 99.8% (235572299/235948672 bytes)
+2025-04-24 22:08:57,304 - __main__ - INFO - Progression: 100.0% (235834443/235948672 bytes)
+2025-04-24 22:08:57,313 - __main__ - INFO - Progression: 100.0% (235948672/235948672 bytes)
+2025-04-24 22:08:57,316 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220829.f298.mp4
+2025-04-24 22:08:57,337 - __main__ - INFO - Progression: 0.0% (1024/12432396 bytes)
+2025-04-24 22:08:57,338 - __main__ - INFO - Progression: 0.0% (3072/12432396 bytes)
+2025-04-24 22:08:57,340 - __main__ - INFO - Progression: 0.1% (7168/12432396 bytes)
+2025-04-24 22:08:57,342 - __main__ - INFO - Progression: 0.1% (15360/12432396 bytes)
+2025-04-24 22:08:57,344 - __main__ - INFO - Progression: 0.3% (31744/12432396 bytes)
+2025-04-24 22:08:57,345 - __main__ - INFO - Progression: 0.5% (64512/12432396 bytes)
+2025-04-24 22:08:57,347 - __main__ - INFO - Progression: 1.0% (130048/12432396 bytes)
+2025-04-24 22:08:57,357 - __main__ - INFO - Progression: 2.1% (261120/12432396 bytes)
+2025-04-24 22:08:57,379 - __main__ - INFO - Progression: 4.2% (523264/12432396 bytes)
+2025-04-24 22:08:57,423 - __main__ - INFO - Progression: 8.4% (1047552/12432396 bytes)
+2025-04-24 22:08:57,512 - __main__ - INFO - Progression: 16.9% (2096128/12432396 bytes)
+2025-04-24 22:08:57,593 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:57] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:57,690 - __main__ - INFO - Progression: 33.7% (4193280/12432396 bytes)
+2025-04-24 22:08:58,046 - __main__ - INFO - Progression: 67.5% (8387584/12432396 bytes)
+2025-04-24 22:08:58,584 - __main__ - INFO - Progression: 82.7% (10278414/12432396 bytes)
+2025-04-24 22:08:58,608 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:58] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:58,739 - __main__ - INFO - Progression: 82.7% (10279438/12432396 bytes)
+2025-04-24 22:08:58,740 - __main__ - INFO - Progression: 82.7% (10281486/12432396 bytes)
+2025-04-24 22:08:58,742 - __main__ - INFO - Progression: 82.7% (10285582/12432396 bytes)
+2025-04-24 22:08:58,743 - __main__ - INFO - Progression: 82.8% (10293774/12432396 bytes)
+2025-04-24 22:08:58,745 - __main__ - INFO - Progression: 82.9% (10310158/12432396 bytes)
+2025-04-24 22:08:58,747 - __main__ - INFO - Progression: 83.2% (10342926/12432396 bytes)
+2025-04-24 22:08:58,749 - __main__ - INFO - Progression: 83.7% (10408462/12432396 bytes)
+2025-04-24 22:08:58,761 - __main__ - INFO - Progression: 84.8% (10539534/12432396 bytes)
+2025-04-24 22:08:58,783 - __main__ - INFO - Progression: 86.9% (10801678/12432396 bytes)
+2025-04-24 22:08:58,827 - __main__ - INFO - Progression: 91.1% (11325966/12432396 bytes)
+2025-04-24 22:08:58,916 - __main__ - INFO - Progression: 99.5% (12374542/12432396 bytes)
+2025-04-24 22:08:58,919 - __main__ - INFO - Progression: 100.0% (12432396/12432396 bytes)
+2025-04-24 22:08:58,922 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_220829.f251.webm
+2025-04-24 22:08:59,620 - __main__ - INFO - Fichier final trouvé: downloads\video_20250424_220829.mp4
+2025-04-24 22:08:59,620 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:59] "GET /download-status/20250424_220829 HTTP/1.1" 200 -
+2025-04-24 22:08:59,663 - __main__ - INFO - Force download du fichier: downloads\video_20250424_220310.mp4
+2025-04-24 22:08:59,665 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:08:59,666 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:08:59] "GET /download-file/20250424 HTTP/1.1" 200 -
+2025-04-24 22:09:59,920 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:09:59] "GET / HTTP/1.1" 200 -
+2025-04-24 22:10:15,460 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:15] "GET / HTTP/1.1" 200 -
+2025-04-24 22:10:30,006 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:10:30,006 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:10:30,006 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:10:30,007 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:10:30,007 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:10:30,071 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:10:33,592 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:10:33,592 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:10:33,813 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:10:33,905 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:10:34,000 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:10:34,000 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:10:34,426 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:10:34,520 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:10:34,616 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:10:34,731 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:10:34,846 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:10:34,894 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:10:34,939 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:10:34,989 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:10:35,416 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:10:35,630 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:10:35,676 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:10:35,960 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:10:36,173 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:10:36,240 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:10:36,464 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:10:36,648 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:10:36,891 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:10:36,936 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:10:37,217 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:10:37,417 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:10:37,485 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:10:37,698 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:10:37,896 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:10:37,945 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:10:37,947 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:10:37,947 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:37] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:10:42,335 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:42] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:10:42,335 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_221042.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000027350E0B9C0>], 'merge_output_format': 'mp4'}
+2025-04-24 22:10:42,400 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:42] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:43,408 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:43] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:44,774 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:44] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:45,932 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:45] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:45,997 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:10:45,999 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:10:46,000 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:10:46,001 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:10:46,009 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:10:46,018 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:10:46,032 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:10:46,044 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:10:46,072 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:10:46,116 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:10:46,205 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:10:46,383 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:10:46,739 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:10:46,884 - __main__ - INFO - Progression: 42.6% (10118452/23744472 bytes)
+2025-04-24 22:10:46,969 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:46] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:47,010 - __main__ - INFO - Progression: 42.6% (10119476/23744472 bytes)
+2025-04-24 22:10:47,011 - __main__ - INFO - Progression: 42.6% (10121524/23744472 bytes)
+2025-04-24 22:10:47,012 - __main__ - INFO - Progression: 42.6% (10125620/23744472 bytes)
+2025-04-24 22:10:47,014 - __main__ - INFO - Progression: 42.7% (10133812/23744472 bytes)
+2025-04-24 22:10:47,016 - __main__ - INFO - Progression: 42.7% (10150196/23744472 bytes)
+2025-04-24 22:10:47,018 - __main__ - INFO - Progression: 42.9% (10182964/23744472 bytes)
+2025-04-24 22:10:47,021 - __main__ - INFO - Progression: 43.2% (10248500/23744472 bytes)
+2025-04-24 22:10:47,031 - __main__ - INFO - Progression: 43.7% (10379572/23744472 bytes)
+2025-04-24 22:10:47,277 - __main__ - INFO - Progression: 44.8% (10641716/23744472 bytes)
+2025-04-24 22:10:47,322 - __main__ - INFO - Progression: 47.0% (11166004/23744472 bytes)
+2025-04-24 22:10:47,471 - __main__ - INFO - Progression: 51.4% (12214580/23744472 bytes)
+2025-04-24 22:10:47,693 - __main__ - INFO - Progression: 60.3% (14311732/23744472 bytes)
+2025-04-24 22:10:47,983 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:47] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:48,195 - __main__ - INFO - Progression: 77.9% (18506036/23744472 bytes)
+2025-04-24 22:10:48,363 - __main__ - INFO - Progression: 86.4% (20518594/23744472 bytes)
+2025-04-24 22:10:48,524 - __main__ - INFO - Progression: 86.4% (20519618/23744472 bytes)
+2025-04-24 22:10:48,526 - __main__ - INFO - Progression: 86.4% (20521666/23744472 bytes)
+2025-04-24 22:10:48,527 - __main__ - INFO - Progression: 86.4% (20525762/23744472 bytes)
+2025-04-24 22:10:48,528 - __main__ - INFO - Progression: 86.5% (20533954/23744472 bytes)
+2025-04-24 22:10:48,530 - __main__ - INFO - Progression: 86.5% (20550338/23744472 bytes)
+2025-04-24 22:10:48,531 - __main__ - INFO - Progression: 86.7% (20583106/23744472 bytes)
+2025-04-24 22:10:48,536 - __main__ - INFO - Progression: 87.0% (20648642/23744472 bytes)
+2025-04-24 22:10:48,546 - __main__ - INFO - Progression: 87.5% (20779714/23744472 bytes)
+2025-04-24 22:10:48,570 - __main__ - INFO - Progression: 88.6% (21041858/23744472 bytes)
+2025-04-24 22:10:48,615 - __main__ - INFO - Progression: 90.8% (21566146/23744472 bytes)
+2025-04-24 22:10:48,703 - __main__ - INFO - Progression: 95.2% (22614722/23744472 bytes)
+2025-04-24 22:10:48,799 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:10:48,801 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221042.f398.mp4
+2025-04-24 22:10:48,840 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:10:48,841 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:10:48,842 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:10:48,845 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:10:48,847 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:10:48,848 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:10:48,850 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:10:48,860 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:10:48,882 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:10:48,927 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:10:49,000 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:49] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:49,016 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:10:49,137 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:10:49,139 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221042.f251.webm
+2025-04-24 22:10:49,429 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:10:50,024 - __main__ - INFO - Fichier final trouvé: downloads\video_20250424_221042.mp4
+2025-04-24 22:10:50,025 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:50] "GET /download-status/20250424_221042 HTTP/1.1" 200 -
+2025-04-24 22:10:50,054 - __main__ - INFO - Force download du fichier: downloads\video_20250424_220310.mp4
+2025-04-24 22:10:50,055 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:10:50] "GET /download-file/20250424 HTTP/1.1" 200 -
+2025-04-24 22:11:09,113 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:09] "GET / HTTP/1.1" 200 -
+2025-04-24 22:11:14,119 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:11:14,119 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:11:14,120 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:11:14,120 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:11:14,120 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:11:14,199 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:11:18,061 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:11:18,061 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:11:18,290 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:11:18,372 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:11:18,417 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:11:18,418 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:11:18,796 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:11:18,841 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:11:18,887 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:11:18,933 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:11:18,978 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:11:19,028 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:11:19,075 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:11:19,121 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:11:19,520 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:11:19,735 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:11:19,781 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:11:20,021 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:11:20,252 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:11:20,320 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:11:20,532 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:11:20,580 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:11:20,775 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:11:20,841 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:11:21,082 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:11:21,290 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:11:21,348 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:11:21,557 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:11:21,799 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:11:21,848 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:11:21,853 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:11:21,854 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:21] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:11:23,504 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:23] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:11:23,504 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_221123.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000027350D55DA0>], 'merge_output_format': 'mp4'}
+2025-04-24 22:11:23,567 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:23] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:24,611 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:24] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:25,852 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:25] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:26,926 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:26] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:27,017 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:11:27,018 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:11:27,019 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:11:27,020 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:11:27,026 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:11:27,035 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:11:27,047 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:11:27,062 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:11:27,086 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:11:27,131 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:11:27,219 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:11:27,397 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:11:27,753 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:11:27,917 - __main__ - INFO - Progression: 43.6% (10341795/23744472 bytes)
+2025-04-24 22:11:27,946 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:27] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:28,080 - __main__ - INFO - Progression: 43.6% (10342819/23744472 bytes)
+2025-04-24 22:11:28,081 - __main__ - INFO - Progression: 43.6% (10344867/23744472 bytes)
+2025-04-24 22:11:28,083 - __main__ - INFO - Progression: 43.6% (10348963/23744472 bytes)
+2025-04-24 22:11:28,084 - __main__ - INFO - Progression: 43.6% (10357155/23744472 bytes)
+2025-04-24 22:11:28,086 - __main__ - INFO - Progression: 43.7% (10373539/23744472 bytes)
+2025-04-24 22:11:28,088 - __main__ - INFO - Progression: 43.8% (10406307/23744472 bytes)
+2025-04-24 22:11:28,090 - __main__ - INFO - Progression: 44.1% (10471843/23744472 bytes)
+2025-04-24 22:11:28,129 - __main__ - INFO - Progression: 44.7% (10602915/23744472 bytes)
+2025-04-24 22:11:28,152 - __main__ - INFO - Progression: 45.8% (10865059/23744472 bytes)
+2025-04-24 22:11:28,196 - __main__ - INFO - Progression: 48.0% (11389347/23744472 bytes)
+2025-04-24 22:11:28,285 - __main__ - INFO - Progression: 52.4% (12437923/23744472 bytes)
+2025-04-24 22:11:28,463 - __main__ - INFO - Progression: 61.2% (14535075/23744472 bytes)
+2025-04-24 22:11:28,830 - __main__ - INFO - Progression: 78.9% (18729379/23744472 bytes)
+2025-04-24 22:11:28,957 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:28] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:29,005 - __main__ - INFO - Progression: 87.7% (20816421/23744472 bytes)
+2025-04-24 22:11:29,172 - __main__ - INFO - Progression: 87.7% (20817445/23744472 bytes)
+2025-04-24 22:11:29,173 - __main__ - INFO - Progression: 87.7% (20819493/23744472 bytes)
+2025-04-24 22:11:29,174 - __main__ - INFO - Progression: 87.7% (20823589/23744472 bytes)
+2025-04-24 22:11:29,176 - __main__ - INFO - Progression: 87.7% (20831781/23744472 bytes)
+2025-04-24 22:11:29,177 - __main__ - INFO - Progression: 87.8% (20848165/23744472 bytes)
+2025-04-24 22:11:29,179 - __main__ - INFO - Progression: 87.9% (20880933/23744472 bytes)
+2025-04-24 22:11:29,182 - __main__ - INFO - Progression: 88.2% (20946469/23744472 bytes)
+2025-04-24 22:11:29,202 - __main__ - INFO - Progression: 88.8% (21077541/23744472 bytes)
+2025-04-24 22:11:29,225 - __main__ - INFO - Progression: 89.9% (21339685/23744472 bytes)
+2025-04-24 22:11:29,269 - __main__ - INFO - Progression: 92.1% (21863973/23744472 bytes)
+2025-04-24 22:11:29,358 - __main__ - INFO - Progression: 96.5% (22912549/23744472 bytes)
+2025-04-24 22:11:29,427 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:11:29,429 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221123.f398.mp4
+2025-04-24 22:11:29,605 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:11:29,606 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:11:29,607 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:11:29,609 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:11:29,610 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:11:29,612 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:11:29,614 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:11:29,625 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:11:29,647 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:11:29,692 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:11:29,781 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:11:29,901 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:11:29,904 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221123.f251.webm
+2025-04-24 22:11:30,027 - __main__ - INFO - Renvoi du fichier vidéo partiel: downloads\video_20250424_221123.f398.mp4
+2025-04-24 22:11:30,035 - __main__ - INFO - Fichier copié: downloads\video_20250424_221123.f398.mp4 -> downloads\video_20250424_221123.mp4
+2025-04-24 22:11:30,036 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:30] "GET /download-status/20250424_221123 HTTP/1.1" 200 -
+2025-04-24 22:11:30,057 - __main__ - INFO - Force download du fichier: downloads\video_20250424_220310.mp4
+2025-04-24 22:11:30,058 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:11:30] "GET /download-file/20250424 HTTP/1.1" 200 -
+2025-04-24 22:11:30,090 - __main__ - ERROR - Erreur dans le thread de téléchargement: [WinError 183] Impossible de créer un fichier déjà existant: 'downloads\\video_20250424_221123.temp.mp4' -> 'downloads\\video_20250424_221123.mp4'
+2025-04-24 22:11:30,094 - __main__ - INFO - Fichier existant supprimé: downloads\video_20250424_221123.mp4
+2025-04-24 22:11:30,095 - __main__ - INFO - Fichier renommé manuellement: downloads\video_20250424_221123.temp.mp4 -> downloads\video_20250424_221123.mp4
+2025-04-24 22:13:17,474 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:13:17,586 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:13:18,750 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:13:18,761 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:13:31,256 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:13:31,309 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:13:32,398 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:13:32,409 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:13:35,559 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:13:35,616 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:13:36,859 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:13:36,873 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:13:47,290 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:13:47,343 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:13:48,503 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:13:48,515 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:14:07,201 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:14:07,262 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:14:08,430 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:14:08,443 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:14:36,369 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:14:36,430 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:14:37,560 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:14:37,572 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:14:39,471 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:14:39] "GET / HTTP/1.1" 200 -
+2025-04-24 22:14:42,924 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:14:42,925 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:14:42,925 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:14:42,925 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:14:42,926 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:14:43,095 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:14:47,578 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:14:47,578 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:14:47,802 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:14:47,850 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:14:47,918 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:14:47,919 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:14:48,256 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:14:48,301 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:14:48,371 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:14:48,418 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:14:48,486 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:14:48,532 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:14:48,578 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:14:48,626 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:14:49,017 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:14:49,227 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:14:49,274 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:14:49,481 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:14:49,705 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:14:49,752 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:14:49,965 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:14:50,042 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:14:50,221 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:14:50,266 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:14:50,450 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:14:50,660 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:14:50,706 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:14:50,909 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:14:51,119 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:14:51,165 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:14:51,167 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:14:51,168 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:14:51] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:15:00,176 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:00] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:15:00,176 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_221500_AgCQSf4bVrY.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x00000219A9A56200>], 'merge_output_format': 'mp4'}
+2025-04-24 22:15:00,240 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:00] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:01,257 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:01] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:02,491 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:02] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:03,646 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:03] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:03,714 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:15:03,715 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:15:03,716 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:15:03,718 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:15:03,724 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:15:03,730 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:15:03,742 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:15:03,756 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:15:03,781 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:15:03,826 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:15:03,915 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:15:04,093 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:15:04,448 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:15:04,601 - __main__ - INFO - Progression: 43.0% (10201029/23744472 bytes)
+2025-04-24 22:15:04,621 - __main__ - INFO - Progression: 43.0% (10202053/23744472 bytes)
+2025-04-24 22:15:04,623 - __main__ - INFO - Progression: 43.0% (10204101/23744472 bytes)
+2025-04-24 22:15:04,624 - __main__ - INFO - Progression: 43.0% (10208197/23744472 bytes)
+2025-04-24 22:15:04,626 - __main__ - INFO - Progression: 43.0% (10216389/23744472 bytes)
+2025-04-24 22:15:04,627 - __main__ - INFO - Progression: 43.1% (10232773/23744472 bytes)
+2025-04-24 22:15:04,629 - __main__ - INFO - Progression: 43.2% (10265541/23744472 bytes)
+2025-04-24 22:15:04,631 - __main__ - INFO - Progression: 43.5% (10331077/23744472 bytes)
+2025-04-24 22:15:04,642 - __main__ - INFO - Progression: 44.1% (10462149/23744472 bytes)
+2025-04-24 22:15:04,657 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:04] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:04,666 - __main__ - INFO - Progression: 45.2% (10724293/23744472 bytes)
+2025-04-24 22:15:04,710 - __main__ - INFO - Progression: 47.4% (11248581/23744472 bytes)
+2025-04-24 22:15:04,799 - __main__ - INFO - Progression: 51.8% (12297157/23744472 bytes)
+2025-04-24 22:15:04,976 - __main__ - INFO - Progression: 60.6% (14394309/23744472 bytes)
+2025-04-24 22:15:05,332 - __main__ - INFO - Progression: 78.3% (18588613/23744472 bytes)
+2025-04-24 22:15:05,487 - __main__ - INFO - Progression: 86.1% (20435513/23744472 bytes)
+2025-04-24 22:15:05,620 - __main__ - INFO - Progression: 86.1% (20436537/23744472 bytes)
+2025-04-24 22:15:05,622 - __main__ - INFO - Progression: 86.1% (20438585/23744472 bytes)
+2025-04-24 22:15:05,624 - __main__ - INFO - Progression: 86.1% (20442681/23744472 bytes)
+2025-04-24 22:15:05,625 - __main__ - INFO - Progression: 86.1% (20450873/23744472 bytes)
+2025-04-24 22:15:05,626 - __main__ - INFO - Progression: 86.2% (20467257/23744472 bytes)
+2025-04-24 22:15:05,628 - __main__ - INFO - Progression: 86.3% (20500025/23744472 bytes)
+2025-04-24 22:15:05,630 - __main__ - INFO - Progression: 86.6% (20565561/23744472 bytes)
+2025-04-24 22:15:05,642 - __main__ - INFO - Progression: 87.2% (20696633/23744472 bytes)
+2025-04-24 22:15:05,664 - __main__ - INFO - Progression: 88.3% (20958777/23744472 bytes)
+2025-04-24 22:15:05,709 - __main__ - INFO - Progression: 90.5% (21483065/23744472 bytes)
+2025-04-24 22:15:05,798 - __main__ - INFO - Progression: 94.9% (22531641/23744472 bytes)
+2025-04-24 22:15:05,899 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:15:05,902 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221500_AgCQSf4bVrY.f398.mp4
+2025-04-24 22:15:06,069 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:15:06,070 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:15:06,072 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:15:06,074 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:15:06,076 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:15:06,078 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:15:06,080 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:15:06,089 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:15:06,111 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:15:06,156 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:15:06,238 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:06] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:06,245 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:15:06,366 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:15:06,368 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221500_AgCQSf4bVrY.f251.webm
+2025-04-24 22:15:06,610 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:15:07,259 - __main__ - INFO - Fichier trouvé pour 20250424_221500_AgCQSf4bVrY: downloads\video_20250424_221500_AgCQSf4bVrY.mp4
+2025-04-24 22:15:07,260 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:07] "GET /download-status/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:15:07,277 - __main__ - INFO - Recherche de fichiers correspondant à: video_20250424_221500_AgCQSf4bVrY.*
+2025-04-24 22:15:07,278 - __main__ - INFO - Fichier trouvé: video_20250424_221500_AgCQSf4bVrY.mp4
+2025-04-24 22:15:07,279 - __main__ - INFO - Force download du fichier: downloads\video_20250424_221500_AgCQSf4bVrY.mp4
+2025-04-24 22:15:07,280 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:15:07] "GET /download-file/20250424_221500_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:16:33,469 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:16:33,557 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:16:34,645 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:16:34,656 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:16:56,483 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:16:56,536 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:16:57,672 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:16:57,682 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:18:30,712 - werkzeug - INFO -  * Detected change in 'c:\\Users\\mathi\\Documents\\ph-dlSuite\\app.py', reloading
+2025-04-24 22:18:30,773 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 22:18:32,082 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 22:18:32,093 - werkzeug - INFO -  * Debugger PIN: 678-099-097
+2025-04-24 22:18:33,129 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:18:33] "GET / HTTP/1.1" 200 -
+2025-04-24 22:18:33,244 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:18:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-24 22:18:48,285 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:18:48,286 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:18:48,286 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:18:48,286 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:18:48,287 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:18:48,411 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:18:52,380 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:18:52,381 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:18:52,596 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:18:52,663 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:18:52,708 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:18:52,708 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:18:53,070 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:18:53,114 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:18:53,181 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:18:53,248 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:18:53,316 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:18:53,361 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:18:53,429 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:18:53,474 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:18:53,860 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:18:54,070 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:18:54,118 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:18:54,336 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:18:54,556 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:18:54,602 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:18:54,826 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:18:54,873 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:18:55,083 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:18:55,152 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:18:55,346 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:18:55,559 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:18:55,604 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:18:55,837 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:18:56,044 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:18:56,091 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:18:56,093 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:18:56,093 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:18:56] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:19:01,318 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:01] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:19:01,319 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_221901_AgCQSf4bVrY.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000023D20C52D40>], 'merge_output_format': 'mp4'}
+2025-04-24 22:19:01,383 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:01] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:02,407 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:02] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:03,676 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:03] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:04,738 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:04] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:05,046 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:19:05,047 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:19:05,048 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:19:05,049 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:19:05,056 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:19:05,065 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:19:05,078 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:19:05,091 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:19:05,119 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:19:05,163 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:19:05,252 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:19:05,430 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:19:05,755 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:05] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:05,786 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:19:05,934 - __main__ - INFO - Progression: 42.8% (10158575/23744472 bytes)
+2025-04-24 22:19:06,102 - __main__ - INFO - Progression: 42.8% (10159599/23744472 bytes)
+2025-04-24 22:19:06,103 - __main__ - INFO - Progression: 42.8% (10161647/23744472 bytes)
+2025-04-24 22:19:06,104 - __main__ - INFO - Progression: 42.8% (10165743/23744472 bytes)
+2025-04-24 22:19:06,105 - __main__ - INFO - Progression: 42.8% (10173935/23744472 bytes)
+2025-04-24 22:19:06,106 - __main__ - INFO - Progression: 42.9% (10190319/23744472 bytes)
+2025-04-24 22:19:06,108 - __main__ - INFO - Progression: 43.1% (10223087/23744472 bytes)
+2025-04-24 22:19:06,112 - __main__ - INFO - Progression: 43.3% (10288623/23744472 bytes)
+2025-04-24 22:19:06,123 - __main__ - INFO - Progression: 43.9% (10419695/23744472 bytes)
+2025-04-24 22:19:06,152 - __main__ - INFO - Progression: 45.0% (10681839/23744472 bytes)
+2025-04-24 22:19:06,196 - __main__ - INFO - Progression: 47.2% (11206127/23744472 bytes)
+2025-04-24 22:19:06,285 - __main__ - INFO - Progression: 51.6% (12254703/23744472 bytes)
+2025-04-24 22:19:06,463 - __main__ - INFO - Progression: 60.4% (14351855/23744472 bytes)
+2025-04-24 22:19:06,818 - __main__ - INFO - Progression: 78.1% (18546159/23744472 bytes)
+2025-04-24 22:19:06,844 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:06] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:06,958 - __main__ - INFO - Progression: 85.1% (20201063/23744472 bytes)
+2025-04-24 22:19:07,104 - __main__ - INFO - Progression: 85.1% (20202087/23744472 bytes)
+2025-04-24 22:19:07,106 - __main__ - INFO - Progression: 85.1% (20204135/23744472 bytes)
+2025-04-24 22:19:07,108 - __main__ - INFO - Progression: 85.1% (20208231/23744472 bytes)
+2025-04-24 22:19:07,110 - __main__ - INFO - Progression: 85.1% (20216423/23744472 bytes)
+2025-04-24 22:19:07,112 - __main__ - INFO - Progression: 85.2% (20232807/23744472 bytes)
+2025-04-24 22:19:07,115 - __main__ - INFO - Progression: 85.3% (20265575/23744472 bytes)
+2025-04-24 22:19:07,117 - __main__ - INFO - Progression: 85.6% (20331111/23744472 bytes)
+2025-04-24 22:19:07,126 - __main__ - INFO - Progression: 86.2% (20462183/23744472 bytes)
+2025-04-24 22:19:07,147 - __main__ - INFO - Progression: 87.3% (20724327/23744472 bytes)
+2025-04-24 22:19:07,192 - __main__ - INFO - Progression: 89.5% (21248615/23744472 bytes)
+2025-04-24 22:19:07,281 - __main__ - INFO - Progression: 93.9% (22297191/23744472 bytes)
+2025-04-24 22:19:07,403 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:19:07,405 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221901_AgCQSf4bVrY.f398.mp4
+2025-04-24 22:19:07,489 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:19:07,491 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:19:07,492 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:19:07,493 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:19:07,494 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:19:07,496 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:19:07,499 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:19:07,510 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:19:07,532 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:19:07,576 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:19:07,665 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:19:07,786 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:19:07,788 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_221901_AgCQSf4bVrY.f251.webm
+2025-04-24 22:19:07,864 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:07] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:08,024 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:19:08,874 - __main__ - INFO - Fichier trouvé pour 20250424_221901_AgCQSf4bVrY: downloads\video_20250424_221901_AgCQSf4bVrY.mp4
+2025-04-24 22:19:08,875 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:08] "GET /download-status/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:08,900 - __main__ - INFO - Recherche de fichiers correspondant à: video_20250424_221901_AgCQSf4bVrY.*
+2025-04-24 22:19:08,900 - __main__ - INFO - Fichier trouvé: video_20250424_221901_AgCQSf4bVrY.mp4
+2025-04-24 22:19:08,901 - __main__ - INFO - Force download du fichier: downloads\video_20250424_221901_AgCQSf4bVrY.mp4
+2025-04-24 22:19:08,902 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:08] "GET /download-file/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:17,233 - __main__ - INFO - Confirmation de téléchargement reçue pour: 20250424_221901_AgCQSf4bVrY
+2025-04-24 22:19:17,234 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:19:17] "POST /confirm-download/20250424_221901_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:19:22,237 - __main__ - INFO - Fichier supprimé après téléchargement: downloads\video_20250424_221901_AgCQSf4bVrY.mp4
+2025-04-24 22:20:05,441 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:05] "GET / HTTP/1.1" 200 -
+2025-04-24 22:20:21,923 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:20:21,924 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:20:21,924 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:20:21,924 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:20:21,924 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:20:21,980 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:20:25,530 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:20:25,530 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:20:25,767 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:20:25,836 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:20:25,882 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:20:25,883 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:20:26,245 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:20:26,312 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:20:26,369 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:20:26,438 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:20:26,482 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:20:26,528 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:20:26,587 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:20:26,643 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:20:27,054 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:20:27,267 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:20:27,335 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:20:27,560 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:20:27,792 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:20:27,838 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:20:28,050 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:20:28,107 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:20:28,340 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:20:28,386 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:20:28,615 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:20:28,823 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:20:28,884 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:20:29,127 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:20:29,346 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:20:29,392 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:20:29,394 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:20:29,395 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:29] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:20:36,351 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:36] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:20:36,352 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_222036_AgCQSf4bVrY.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000023D20C64FE0>], 'merge_output_format': 'mp4'}
+2025-04-24 22:20:36,413 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:36] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:37,433 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:37] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:38,642 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:38] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:39,775 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:39] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:39,873 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:20:39,875 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:20:39,876 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:20:39,877 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:20:39,885 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:20:39,894 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:20:39,907 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:20:39,921 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:20:39,948 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:20:39,992 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:20:40,081 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:20:40,259 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:20:40,615 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:20:40,754 - __main__ - INFO - Progression: 42.3% (10048242/23744472 bytes)
+2025-04-24 22:20:40,811 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:40] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:40,908 - __main__ - INFO - Progression: 42.3% (10049266/23744472 bytes)
+2025-04-24 22:20:40,910 - __main__ - INFO - Progression: 42.3% (10051314/23744472 bytes)
+2025-04-24 22:20:40,911 - __main__ - INFO - Progression: 42.3% (10055410/23744472 bytes)
+2025-04-24 22:20:40,913 - __main__ - INFO - Progression: 42.4% (10063602/23744472 bytes)
+2025-04-24 22:20:40,914 - __main__ - INFO - Progression: 42.5% (10079986/23744472 bytes)
+2025-04-24 22:20:40,916 - __main__ - INFO - Progression: 42.6% (10112754/23744472 bytes)
+2025-04-24 22:20:40,918 - __main__ - INFO - Progression: 42.9% (10178290/23744472 bytes)
+2025-04-24 22:20:40,929 - __main__ - INFO - Progression: 43.4% (10309362/23744472 bytes)
+2025-04-24 22:20:40,953 - __main__ - INFO - Progression: 44.5% (10571506/23744472 bytes)
+2025-04-24 22:20:40,998 - __main__ - INFO - Progression: 46.7% (11095794/23744472 bytes)
+2025-04-24 22:20:41,087 - __main__ - INFO - Progression: 51.1% (12144370/23744472 bytes)
+2025-04-24 22:20:41,265 - __main__ - INFO - Progression: 60.0% (14241522/23744472 bytes)
+2025-04-24 22:20:41,621 - __main__ - INFO - Progression: 77.6% (18435826/23744472 bytes)
+2025-04-24 22:20:41,785 - __main__ - INFO - Progression: 85.9% (20403486/23744472 bytes)
+2025-04-24 22:20:41,830 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:41] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:41,833 - __main__ - INFO - Progression: 85.9% (20404510/23744472 bytes)
+2025-04-24 22:20:41,835 - __main__ - INFO - Progression: 85.9% (20406558/23744472 bytes)
+2025-04-24 22:20:41,836 - __main__ - INFO - Progression: 86.0% (20410654/23744472 bytes)
+2025-04-24 22:20:41,839 - __main__ - INFO - Progression: 86.0% (20418846/23744472 bytes)
+2025-04-24 22:20:41,841 - __main__ - INFO - Progression: 86.1% (20435230/23744472 bytes)
+2025-04-24 22:20:41,845 - __main__ - INFO - Progression: 86.2% (20467998/23744472 bytes)
+2025-04-24 22:20:41,846 - __main__ - INFO - Progression: 86.5% (20533534/23744472 bytes)
+2025-04-24 22:20:41,853 - __main__ - INFO - Progression: 87.0% (20664606/23744472 bytes)
+2025-04-24 22:20:41,875 - __main__ - INFO - Progression: 88.1% (20926750/23744472 bytes)
+2025-04-24 22:20:41,921 - __main__ - INFO - Progression: 90.3% (21451038/23744472 bytes)
+2025-04-24 22:20:42,010 - __main__ - INFO - Progression: 94.8% (22499614/23744472 bytes)
+2025-04-24 22:20:42,114 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:20:42,117 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_222036_AgCQSf4bVrY.f398.mp4
+2025-04-24 22:20:42,274 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:20:42,275 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:20:42,277 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:20:42,278 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:20:42,280 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:20:42,282 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:20:42,283 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:20:42,294 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:20:42,316 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:20:42,361 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:20:42,450 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:20:42,571 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:20:42,573 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_222036_AgCQSf4bVrY.f251.webm
+2025-04-24 22:20:42,778 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:20:42,852 - __main__ - INFO - Fichier trouvé pour 20250424_222036_AgCQSf4bVrY: downloads\video_20250424_222036_AgCQSf4bVrY.mp4
+2025-04-24 22:20:42,852 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:42] "GET /download-status/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:42,869 - __main__ - INFO - Recherche de fichiers correspondant à: video_20250424_222036_AgCQSf4bVrY.*
+2025-04-24 22:20:42,870 - __main__ - INFO - Fichier trouvé: video_20250424_222036_AgCQSf4bVrY.mp4
+2025-04-24 22:20:42,870 - __main__ - INFO - Force download du fichier: downloads\video_20250424_222036_AgCQSf4bVrY.mp4
+2025-04-24 22:20:42,871 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:42] "GET /download-file/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:50,878 - __main__ - INFO - Confirmation de téléchargement reçue pour: 20250424_222036_AgCQSf4bVrY
+2025-04-24 22:20:50,879 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:20:50] "POST /confirm-download/20250424_222036_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:20:55,881 - __main__ - INFO - Fichier supprimé après téléchargement: downloads\video_20250424_222036_AgCQSf4bVrY.mp4
+2025-04-24 22:21:56,464 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:21:56] "GET / HTTP/1.1" 200 -
+2025-04-24 22:28:41,786 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:28:41] "GET / HTTP/1.1" 200 -
+2025-04-24 22:30:46,236 - __main__ - INFO - Réception d'une requête GET-VIDEO-INFO
+2025-04-24 22:30:46,237 - __main__ - INFO - Traitement de l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:30:46,237 - __main__ - INFO - ID vidéo extrait: AgCQSf4bVrY
+2025-04-24 22:30:46,238 - __main__ - INFO - Début de l'extraction des informations pour l'URL: https://www.youtube.com/watch?v=AgCQSf4bVrY
+2025-04-24 22:30:46,238 - __main__ - INFO - Initialisation de yt-dlp
+2025-04-24 22:30:46,306 - __main__ - INFO - Extraction des informations...
+2025-04-24 22:30:51,065 - __main__ - INFO - Informations extraites avec succès
+2025-04-24 22:30:51,065 - __main__ - INFO - Nombre de formats trouvés: 40
+2025-04-24 22:30:51,327 - __main__ - INFO - Meilleur format audio trouvé: 36.903kbps - Taille réelle: 1367185 bytes
+2025-04-24 22:30:51,374 - __main__ - INFO - Meilleur format audio trouvé: 48.417kbps - Taille réelle: 1793756 bytes
+2025-04-24 22:30:51,422 - __main__ - INFO - Meilleur format audio trouvé: 129.49kbps - Taille réelle: 4798023 bytes
+2025-04-24 22:30:51,422 - __main__ - INFO - Traitement des formats...
+2025-04-24 22:30:51,841 - __main__ - INFO - Format audio trouvé: 36.903kbps - Taille: 1367185 bytes
+2025-04-24 22:30:51,890 - __main__ - INFO - Format audio trouvé: 48.417kbps - Taille: 1793756 bytes
+2025-04-24 22:30:51,939 - __main__ - INFO - Format audio trouvé: 36.892kbps - Taille: 1366781 bytes
+2025-04-24 22:30:51,989 - __main__ - INFO - Format audio trouvé: 48.399kbps - Taille: 1793069 bytes
+2025-04-24 22:30:52,070 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:30:52,119 - __main__ - INFO - Format audio trouvé: 95.306kbps - Taille: 3530878 bytes
+2025-04-24 22:30:52,191 - __main__ - INFO - Format audio trouvé: 129.49kbps - Taille: 4798023 bytes
+2025-04-24 22:30:52,262 - __main__ - INFO - Format audio trouvé: 95.21kbps - Taille: 3527316 bytes
+2025-04-24 22:30:52,684 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2922123 bytes - Total avec audio: 7720146 bytes - Adaptatif: True
+2025-04-24 22:30:52,944 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2896273 bytes - Total avec audio: 7694296 bytes - Adaptatif: True
+2025-04-24 22:30:52,993 - __main__ - INFO - Format vidéo trouvé: 144p 30fps - Taille vidéo: 2510419 bytes - Total avec audio: 7308442 bytes - Adaptatif: True
+2025-04-24 22:30:53,211 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6614294 bytes - Total avec audio: 11412317 bytes - Adaptatif: True
+2025-04-24 22:30:53,431 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 6032490 bytes - Total avec audio: 10830513 bytes - Adaptatif: True
+2025-04-24 22:30:53,482 - __main__ - INFO - Format vidéo trouvé: 240p 30fps - Taille vidéo: 4452333 bytes - Total avec audio: 9250356 bytes - Adaptatif: True
+2025-04-24 22:30:53,707 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 11071990 bytes - Total avec audio: 15870013 bytes - Adaptatif: True
+2025-04-24 22:30:53,755 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 15847226 bytes - Total avec audio: 15847226 bytes - Adaptatif: False
+2025-04-24 22:30:53,998 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 10308315 bytes - Total avec audio: 15106338 bytes - Adaptatif: True
+2025-04-24 22:30:54,047 - __main__ - INFO - Format vidéo trouvé: 360p 30fps - Taille vidéo: 8910429 bytes - Total avec audio: 13708452 bytes - Adaptatif: True
+2025-04-24 22:30:54,267 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 14972422 bytes - Total avec audio: 19770445 bytes - Adaptatif: True
+2025-04-24 22:30:54,479 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 15515560 bytes - Total avec audio: 20313583 bytes - Adaptatif: True
+2025-04-24 22:30:54,546 - __main__ - INFO - Format vidéo trouvé: 480p 30fps - Taille vidéo: 13250573 bytes - Total avec audio: 18048596 bytes - Adaptatif: True
+2025-04-24 22:30:54,771 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 25256185 bytes - Total avec audio: 30054208 bytes - Adaptatif: True
+2025-04-24 22:30:54,973 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23326248 bytes - Total avec audio: 28124271 bytes - Adaptatif: True
+2025-04-24 22:30:55,021 - __main__ - INFO - Format vidéo trouvé: 720p 30fps - Taille vidéo: 23744472 bytes - Total avec audio: 28542495 bytes - Adaptatif: True
+2025-04-24 22:30:55,023 - __main__ - INFO - Résultat obtenu de yt-dlp
+2025-04-24 22:30:55,024 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:30:55] "POST /get-video-info HTTP/1.1" 200 -
+2025-04-24 22:31:03,429 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:03] "POST /download HTTP/1.1" 200 -
+2025-04-24 22:31:03,430 - __main__ - INFO - Téléchargement avec options: {'format': 'bestvideo[height<=720]+bestaudio/best', 'outtmpl': 'downloads\\video_20250424_223103_AgCQSf4bVrY.%(ext)s', 'progress_hooks': [<function download.<locals>.progress_hook at 0x0000023D20C66200>], 'merge_output_format': 'mp4'}
+2025-04-24 22:31:03,515 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:03] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:04,535 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:04] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:05,770 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:05] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:07,110 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:07] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:07,719 - __main__ - INFO - Progression: 0.0% (1024/23744472 bytes)
+2025-04-24 22:31:07,720 - __main__ - INFO - Progression: 0.0% (3072/23744472 bytes)
+2025-04-24 22:31:07,722 - __main__ - INFO - Progression: 0.0% (7168/23744472 bytes)
+2025-04-24 22:31:07,723 - __main__ - INFO - Progression: 0.1% (15360/23744472 bytes)
+2025-04-24 22:31:07,731 - __main__ - INFO - Progression: 0.1% (31744/23744472 bytes)
+2025-04-24 22:31:07,740 - __main__ - INFO - Progression: 0.3% (64512/23744472 bytes)
+2025-04-24 22:31:07,753 - __main__ - INFO - Progression: 0.5% (130048/23744472 bytes)
+2025-04-24 22:31:07,767 - __main__ - INFO - Progression: 1.1% (261120/23744472 bytes)
+2025-04-24 22:31:07,793 - __main__ - INFO - Progression: 2.2% (523264/23744472 bytes)
+2025-04-24 22:31:07,837 - __main__ - INFO - Progression: 4.4% (1047552/23744472 bytes)
+2025-04-24 22:31:07,926 - __main__ - INFO - Progression: 8.8% (2096128/23744472 bytes)
+2025-04-24 22:31:08,104 - __main__ - INFO - Progression: 17.7% (4193280/23744472 bytes)
+2025-04-24 22:31:08,170 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:08] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:08,460 - __main__ - INFO - Progression: 35.3% (8387584/23744472 bytes)
+2025-04-24 22:31:08,600 - __main__ - INFO - Progression: 42.4% (10061087/23744472 bytes)
+2025-04-24 22:31:08,620 - __main__ - INFO - Progression: 42.4% (10062111/23744472 bytes)
+2025-04-24 22:31:08,621 - __main__ - INFO - Progression: 42.4% (10064159/23744472 bytes)
+2025-04-24 22:31:08,623 - __main__ - INFO - Progression: 42.4% (10068255/23744472 bytes)
+2025-04-24 22:31:08,624 - __main__ - INFO - Progression: 42.4% (10076447/23744472 bytes)
+2025-04-24 22:31:08,626 - __main__ - INFO - Progression: 42.5% (10092831/23744472 bytes)
+2025-04-24 22:31:08,628 - __main__ - INFO - Progression: 42.6% (10125599/23744472 bytes)
+2025-04-24 22:31:08,630 - __main__ - INFO - Progression: 42.9% (10191135/23744472 bytes)
+2025-04-24 22:31:08,641 - __main__ - INFO - Progression: 43.5% (10322207/23744472 bytes)
+2025-04-24 22:31:08,757 - __main__ - INFO - Progression: 44.6% (10584351/23744472 bytes)
+2025-04-24 22:31:08,801 - __main__ - INFO - Progression: 46.8% (11108639/23744472 bytes)
+2025-04-24 22:31:08,890 - __main__ - INFO - Progression: 51.2% (12157215/23744472 bytes)
+2025-04-24 22:31:09,068 - __main__ - INFO - Progression: 60.0% (14254367/23744472 bytes)
+2025-04-24 22:31:09,192 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:09] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:09,424 - __main__ - INFO - Progression: 77.7% (18448671/23744472 bytes)
+2025-04-24 22:31:09,580 - __main__ - INFO - Progression: 85.6% (20321761/23744472 bytes)
+2025-04-24 22:31:09,620 - __main__ - INFO - Progression: 85.6% (20322785/23744472 bytes)
+2025-04-24 22:31:09,622 - __main__ - INFO - Progression: 85.6% (20324833/23744472 bytes)
+2025-04-24 22:31:09,624 - __main__ - INFO - Progression: 85.6% (20328929/23744472 bytes)
+2025-04-24 22:31:09,625 - __main__ - INFO - Progression: 85.6% (20337121/23744472 bytes)
+2025-04-24 22:31:09,627 - __main__ - INFO - Progression: 85.7% (20353505/23744472 bytes)
+2025-04-24 22:31:09,629 - __main__ - INFO - Progression: 85.9% (20386273/23744472 bytes)
+2025-04-24 22:31:09,630 - __main__ - INFO - Progression: 86.1% (20451809/23744472 bytes)
+2025-04-24 22:31:09,640 - __main__ - INFO - Progression: 86.7% (20582881/23744472 bytes)
+2025-04-24 22:31:09,663 - __main__ - INFO - Progression: 87.8% (20845025/23744472 bytes)
+2025-04-24 22:31:09,719 - __main__ - INFO - Progression: 90.0% (21369313/23744472 bytes)
+2025-04-24 22:31:09,807 - __main__ - INFO - Progression: 94.4% (22417889/23744472 bytes)
+2025-04-24 22:31:09,919 - __main__ - INFO - Progression: 100.0% (23744472/23744472 bytes)
+2025-04-24 22:31:09,921 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_223103_AgCQSf4bVrY.f398.mp4
+2025-04-24 22:31:09,964 - __main__ - INFO - Progression: 0.0% (1024/3527316 bytes)
+2025-04-24 22:31:09,966 - __main__ - INFO - Progression: 0.1% (3072/3527316 bytes)
+2025-04-24 22:31:09,968 - __main__ - INFO - Progression: 0.2% (7168/3527316 bytes)
+2025-04-24 22:31:09,970 - __main__ - INFO - Progression: 0.4% (15360/3527316 bytes)
+2025-04-24 22:31:09,972 - __main__ - INFO - Progression: 0.9% (31744/3527316 bytes)
+2025-04-24 22:31:09,975 - __main__ - INFO - Progression: 1.8% (64512/3527316 bytes)
+2025-04-24 22:31:09,977 - __main__ - INFO - Progression: 3.7% (130048/3527316 bytes)
+2025-04-24 22:31:09,985 - __main__ - INFO - Progression: 7.4% (261120/3527316 bytes)
+2025-04-24 22:31:10,007 - __main__ - INFO - Progression: 14.8% (523264/3527316 bytes)
+2025-04-24 22:31:10,051 - __main__ - INFO - Progression: 29.7% (1047552/3527316 bytes)
+2025-04-24 22:31:10,140 - __main__ - INFO - Progression: 59.4% (2096128/3527316 bytes)
+2025-04-24 22:31:10,226 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:10] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:10,261 - __main__ - INFO - Progression: 100.0% (3527316/3527316 bytes)
+2025-04-24 22:31:10,264 - __main__ - INFO - Téléchargement terminé: downloads\video_20250424_223103_AgCQSf4bVrY.f251.webm
+2025-04-24 22:31:10,544 - __main__ - INFO - Téléchargement terminé avec succès
+2025-04-24 22:31:11,235 - __main__ - INFO - Fichier trouvé pour 20250424_223103_AgCQSf4bVrY: downloads\video_20250424_223103_AgCQSf4bVrY.mp4
+2025-04-24 22:31:11,235 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:11] "GET /download-status/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:11,260 - __main__ - INFO - Recherche de fichiers correspondant à: video_20250424_223103_AgCQSf4bVrY.*
+2025-04-24 22:31:11,260 - __main__ - INFO - Fichier trouvé: video_20250424_223103_AgCQSf4bVrY.mp4
+2025-04-24 22:31:11,261 - __main__ - INFO - Force download du fichier: downloads\video_20250424_223103_AgCQSf4bVrY.mp4
+2025-04-24 22:31:11,261 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:11] "GET /download-file/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:19,251 - __main__ - INFO - Confirmation de téléchargement reçue pour: 20250424_223103_AgCQSf4bVrY
+2025-04-24 22:31:19,252 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 22:31:19] "POST /confirm-download/20250424_223103_AgCQSf4bVrY HTTP/1.1" 200 -
+2025-04-24 22:31:24,254 - __main__ - INFO - Fichier supprimé après téléchargement: downloads\video_20250424_223103_AgCQSf4bVrY.mp4

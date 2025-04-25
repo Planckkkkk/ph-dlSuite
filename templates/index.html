@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .main-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .video-info {
+            margin-top: 2rem;
+            display: none;
+        }
+        .thumbnail {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .loading {
+            display: none;
+        }
+        .quality-option {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            border-radius: 4px;
+            position: relative;
+        }
+        .quality-option .d-flex {
+            width: 100%;
+            gap: 20px;
+        }
+        .quality-info {
+            flex: 1;
+            min-width: 150px;
+        }
+        .file-size {
+            min-width: 100px;
+            text-align: right;
+            color: #666;
+        }
+        .download-progress {
+            margin: 8px 0;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 8px;
+            position: relative;
+        }
+        .progress-bar {
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        .progress-text {
+            position: absolute;
+            right: 0;
+            top: -18px;
+            font-size: 12px;
+            color: #666;
+        }
+        .download-btn {
+            min-width: 120px;
+            position: relative;
+            margin-left: 20px;
+        }
+        .download-btn.downloading {
+            background-color: #FFA726;
+            cursor: not-allowed;
+        }
+        .download-btn.completed {
+            background-color: #4CAF50;
+        }
+        .download-progress-global {
+            margin: 15px 0;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            overflow: hidden;
+            height: 10px;
+            position: relative;
+            display: none;
+        }
+        .download-progress-global .progress-bar {
+            height: 100%;
+            transition: width 0.3s ease;
+            background-color: #0d6efd;
+        }
+        .download-progress-global .progress-text {
+            position: absolute;
+            right: 0;
+            top: -20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .download-progress-global .progress-status {
+            position: absolute;
+            left: 0;
+            top: -20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container main-container">
+        <h1 class="text-center mb-4">YouTube Downloader</h1>
+        
+        <!-- Formulaire d'URL -->
+        <div class="input-group mb-3">
+            <input type="text" id="video-url" class="form-control" placeholder="Collez l'URL YouTube ici...">
+            <button class="btn btn-primary" type="button" id="fetch-info">
+                <i class="fas fa-search"></i> Analyser
+            </button>
+        </div>
+
+        <!-- Indicateur de chargement -->
+        <div class="loading text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Chargement...</span>
+            </div>
+        </div>
+
+        <!-- Informations sur la vidéo -->
+        <div class="video-info">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="" alt="Miniature" class="thumbnail mb-3">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="video-title"></h3>
+                    <p class="video-author"></p>
+                    <p class="video-duration"></p>
+                </div>
+            </div>
+
+            <!-- Options de téléchargement -->
+            <div class="download-options mt-4">
+                <!-- Barre de progression globale -->
+                <div class="download-progress-global">
+                    <div class="progress-status">Téléchargement en cours...</div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
+                    <div class="progress-text">0%</div>
+                </div>
+
+                <ul class="nav nav-tabs" id="downloadTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab">
+                            <i class="fas fa-video"></i> Vidéo
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="audio-tab" data-bs-toggle="tab" data-bs-target="#audio" type="button" role="tab">
+                            <i class="fas fa-music"></i> Audio
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content mt-3" id="downloadTabsContent">
+                    <!-- Options vidéo -->
+                    <div class="tab-pane fade show active" id="video" role="tabpanel">
+                        <div class="list-group video-qualities">
+                            <!-- Les qualités vidéo seront ajoutées ici dynamiquement -->
+                        </div>
+                    </div>
+
+                    <!-- Options audio -->
+                    <div class="tab-pane fade" id="audio" role="tabpanel">
+                        <div class="list-group audio-qualities">
+                            <!-- Les qualités audio seront ajoutées ici dynamiquement -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages de statut -->
+        <div class="alert mt-3" role="alert" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let isDownloading = false;  // Variable globale pour suivre l'état du téléchargement
+
+        // Définir downloadVideo comme une fonction globale
+        window.downloadVideo = function(url, itag, type = 'video', is_adaptive = false, audio_url = '') {
+            if (isDownloading) {
+                showAlert('Un téléchargement est déjà en cours. Veuillez attendre qu\'il se termine.', 'warning');
+                return;
+            }
+
+            isDownloading = true;
+            
+            // Récupérer uniquement le bouton cliqué
+            const clickedButton = event.target;
+            clickedButton.disabled = true;
+            clickedButton.classList.add('downloading');
+            const originalText = clickedButton.textContent;
+            clickedButton.textContent = 'Préparation...';
+
+            // Désactiver tous les autres boutons
+            document.querySelectorAll('.download-btn').forEach(button => {
+                if (button !== clickedButton) {
+                    button.disabled = true;
+                }
+            });
+
+            // Afficher et configurer la barre de progression globale
+            const progressDiv = document.querySelector('.download-progress-global');
+            const progressBar = progressDiv.querySelector('.progress-bar');
+            const progressText = progressDiv.querySelector('.progress-text');
+            progressDiv.style.display = 'block';
+            progressBar.style.width = '0%';
+            progressText.textContent = '0%';
+            
+            // Récupérer la qualité vidéo depuis l'élément parent si elle existe
+            let quality = '';
+            if (type === 'video') {
+                const qualityText = clickedButton.closest('.quality-option').querySelector('.quality-info').textContent;
+                const match = qualityText.match(/(\d+)p/);
+                if (match && match[1]) {
+                    quality = match[1]; // Récupérer juste le nombre, ex: 720 depuis "720p"
+                }
+            }
+
+            // Préparer les données pour la requête
+            const data = {
+                url: url,
+                itag: itag,
+                type: type,
+                is_adaptive: is_adaptive,
+                quality: quality
+            };
+
+            console.log('Début du téléchargement:', data);
+
+            // Démarrer le téléchargement
+            fetch('/download', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    throw new Error(data.error || 'Erreur lors du démarrage du téléchargement');
+                }
+                
+                const timestamp = data.timestamp;
+                console.log('Téléchargement démarré, timestamp:', timestamp);
+                
+                // Fonction pour vérifier le statut du téléchargement
+                function checkStatus() {
+                    fetch(`/download-status/${timestamp}`)
+                        .then(response => response.json())
+                        .then(statusData => {
+                            if (statusData.status === 'downloading') {
+                                // Mettre à jour la progression
+                                const progress = Math.round(statusData.progress);
+                                progressBar.style.width = `${progress}%`;
+                                progressText.textContent = `${progress}%`;
+                                
+                                // Continuer à vérifier
+                                setTimeout(checkStatus, 1000);
+                            }
+                            else if (statusData.status === 'complete') {
+                                // Téléchargement terminé
+                                progressBar.style.width = '100%';
+                                progressText.textContent = '100%';
+                                progressBar.classList.remove('progress-bar-animated');
+                                
+                                console.log('Téléchargement terminé:', statusData);
+                                
+                                // URL du fichier direct
+                                const fileUrl = `/downloads/${statusData.filename}`;
+                                
+                                // URL de téléchargement forcé avec le download_id unique
+                                const forceDownloadUrl = `/download-file/${statusData.download_id}`;
+                                
+                                console.log('URL de téléchargement forcé:', forceDownloadUrl);
+                                
+                                // Variable pour suivre si le téléchargement a été confirmé
+                                let downloadConfirmed = false;
+                                
+                                // Fonction pour confirmer le téléchargement et supprimer le fichier du serveur
+                                function confirmDownload(downloadId) {
+                                    if (downloadConfirmed) return; // Éviter les doublons
+                                    
+                                    // Marquer comme confirmé
+                                    downloadConfirmed = true;
+                                    console.log('Confirmation du téléchargement:', downloadId);
+                                    
+                                    // Attendre un court délai pour s'assurer que le téléchargement est bien terminé
+                                    setTimeout(() => {
+                                        fetch(`/confirm-download/${downloadId}`, {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json',
+                                            }
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            console.log('Réponse de confirmation:', data);
+                                        })
+                                        .catch(error => {
+                                            console.error('Erreur lors de la confirmation:', error);
+                                        });
+                                    }, 3000); // Attendre 3 secondes
+                                }
+                                
+                                // Rediriger vers le téléchargement forcé
+                                window.location.href = forceDownloadUrl;
+                                
+                                // Confirmer le téléchargement après un court délai (pour s'assurer que le téléchargement a commencé)
+                                setTimeout(() => {
+                                    confirmDownload(statusData.download_id);
+                                }, 5000); // Attendre 5 secondes
+                                
+                                // Afficher un message pour l'utilisateur
+                                const message = document.createElement('div');
+                                message.innerHTML = `
+                                    <p>Téléchargement terminé: ${statusData.filename} (${formatFileSize(statusData.filesize)})</p>
+                                    <p>Si le téléchargement ne démarre pas automatiquement:</p>
+                                    <a href="${forceDownloadUrl}" class="btn btn-success" download onclick="confirmDownload('${statusData.download_id}')">
+                                        <i class="fas fa-download"></i> Télécharger maintenant
+                                    </a>
+                                `;
+                                
+                                showAlert(message, 'success');
+                                
+                                // Ajouter la fonction confirmDownload à window pour qu'elle soit accessible depuis le bouton
+                                window.confirmDownload = confirmDownload;
+                                
+                                // Réactiver tous les boutons
+                                document.querySelectorAll('.download-btn').forEach(button => {
+                                    button.disabled = false;
+                                    if (button === clickedButton) {
+                                        button.classList.remove('downloading');
+                                        button.classList.add('completed');
+                                    }
+                                    button.textContent = 'Télécharger';
+                                });
+                                
+                                // Cacher la barre de progression après 2 secondes
+                                setTimeout(() => {
+                                    progressDiv.style.display = 'none';
+                                    clickedButton.classList.remove('completed');
+                                    isDownloading = false;
+                                }, 2000);
+                            }
+                            else if (statusData.status === 'error') {
+                                throw new Error(statusData.message || 'Erreur lors du téléchargement');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Erreur lors de la vérification du statut:', error);
+                            showAlert('Erreur lors du téléchargement: ' + error.message, 'danger');
+                            progressDiv.style.display = 'none';
+                            
+                            // Réactiver tous les boutons
+                            document.querySelectorAll('.download-btn').forEach(button => {
+                                button.disabled = false;
+                                if (button === clickedButton) {
+                                    button.classList.remove('downloading');
+                                }
+                                button.textContent = 'Télécharger';
+                            });
+                            
+                            isDownloading = false;
+                        });
+                }
+                
+                // Démarrer la vérification du statut
+                checkStatus();
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                showAlert('Erreur lors du téléchargement: ' + error.message, 'danger');
+                progressDiv.style.display = 'none';
+                
+                // Réactiver tous les boutons
+                document.querySelectorAll('.download-btn').forEach(button => {
+                    button.disabled = false;
+                    if (button === clickedButton) {
+                        button.classList.remove('downloading');
+                    }
+                    button.textContent = 'Télécharger';
+                });
+                
+                isDownloading = false;
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoUrlInput = document.getElementById('video-url');
+            const fetchButton = document.getElementById('fetch-info');
+            const videoInfo = document.querySelector('.video-info');
+            const loading = document.querySelector('.loading');
+            const alertBox = document.querySelector('.alert');
+
+            function showLoading() {
+                loading.style.display = 'block';
+                videoInfo.style.display = 'none';
+                alertBox.style.display = 'none';
+            }
+
+            function hideLoading() {
+                loading.style.display = 'none';
+            }
+
+            function showAlert(message, type = 'danger') {
+                alertBox.className = `alert alert-${type} mt-3`;
+                
+                // Vérifier si le message est un élément DOM ou du HTML
+                if (message instanceof Element) {
+                    alertBox.innerHTML = '';
+                    alertBox.appendChild(message);
+                } else if (typeof message === 'object' && !(message instanceof Element)) {
+                    // Si c'est un objet qui n'est pas un élément DOM, le convertir en texte
+                    alertBox.textContent = JSON.stringify(message);
+                } else {
+                    // Si c'est une chaîne, l'utiliser comme HTML
+                    alertBox.innerHTML = message;
+                }
+                
+                alertBox.style.display = 'block';
+            }
+
+            function formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+
+            function formatDuration(seconds) {
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const remainingSeconds = seconds % 60;
+                return `${hours > 0 ? hours + 'h ' : ''}${minutes}m ${remainingSeconds}s`;
+            }
+
+            async function getVideoInfo() {
+                const url = videoUrlInput.value.trim();
+                if (!url) {
+                    showAlert('Veuillez entrer une URL YouTube valide');
+                    return;
+                }
+
+                showLoading();
+
+                try {
+                    const response = await fetch('/get-video-info', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ url: url })
+                    });
+
+                    const data = await response.json();
+                    console.log('Réponse reçue:', data);
+
+                    if (data.success) {
+                        displayVideoInfo(data.data);
+                        videoInfo.style.display = 'block';
+                    } else {
+                        console.error('Erreur serveur:', data.error);
+                        showAlert(data.error);
+                    }
+                } catch (error) {
+                    console.error('Erreur complète:', error);
+                    showAlert('Une erreur est survenue lors de la récupération des informations');
+                } finally {
+                    hideLoading();
+                }
+            }
+
+            function displayVideoInfo(info) {
+                console.log('Affichage des informations:', info);
+                const videoInfoDiv = document.querySelector('.video-info');
+                
+                // Mise à jour de la miniature
+                const thumbnail = videoInfoDiv.querySelector('.thumbnail');
+                thumbnail.src = info.thumbnail;
+                
+                // Mise à jour du titre
+                const title = videoInfoDiv.querySelector('.video-title');
+                title.textContent = info.title;
+                
+                // Mise à jour de l'auteur
+                const author = videoInfoDiv.querySelector('.video-author');
+                author.textContent = `Par ${info.author}`;
+                
+                // Mise à jour de la durée
+                const duration = videoInfoDiv.querySelector('.video-duration');
+                duration.textContent = `Durée: ${formatDuration(info.duration)}`;
+                
+                // Mise à jour des qualités vidéo
+                const videoQualities = videoInfoDiv.querySelector('.video-qualities');
+                videoQualities.innerHTML = '';
+                
+                if (info.streams.video && info.streams.video.length > 0) {
+                    info.streams.video.forEach(stream => {
+                        const qualityOption = document.createElement('div');
+                        qualityOption.className = 'list-group-item quality-option';
+                        
+                        // Formater l'affichage de la qualité
+                        let qualityText = stream.format;
+                        if (stream.fps) {
+                            qualityText = qualityText.replace(/(\d+p)/, `$1 ${stream.fps}fps`);
+                        }
+                        if (stream.is_adaptive) {
+                            qualityText += ' (HD)';
+                        }
+                        
+                        qualityOption.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="quality-info">${qualityText}</span>
+                                <span class="file-size">${formatFileSize(stream.filesize)}</span>
+                                <button class="btn btn-primary download-btn" onclick="downloadVideo('${info.url}', '${stream.itag}', 'video', ${stream.is_adaptive}, '${stream.audio_url || ''}')">
+                                    Télécharger
+                                </button>
+                            </div>
+                        `;
+                        videoQualities.appendChild(qualityOption);
+                    });
+                } else {
+                    videoQualities.innerHTML = '<p class="text-muted">Aucune qualité vidéo disponible</p>';
+                }
+
+                // Mise à jour des qualités audio
+                const audioQualities = videoInfoDiv.querySelector('.audio-qualities');
+                audioQualities.innerHTML = '';
+                
+                if (info.streams.audio && info.streams.audio.length > 0) {
+                    info.streams.audio.forEach(stream => {
+                        const qualityOption = document.createElement('div');
+                        qualityOption.className = 'list-group-item quality-option';
+                        qualityOption.innerHTML = `
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="quality-info">${stream.format}</span>
+                                <span class="file-size">${formatFileSize(stream.filesize)}</span>
+                                <button class="btn btn-primary download-btn" onclick="downloadVideo('${info.url}', '${stream.itag}', 'audio')">
+                                    Télécharger
+                                </button>
+                            </div>
+                        `;
+                        audioQualities.appendChild(qualityOption);
+                    });
+                } else {
+                    audioQualities.innerHTML = '<p class="text-muted">Aucune qualité audio disponible</p>';
+                }
+            }
+
+            fetchButton.addEventListener('click', getVideoInfo);
+            videoUrlInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    getVideoInfo();
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
